@@ -30,5 +30,7 @@ class Jogo:
             print("O jogador O venceu!")
         
     def troca_usuario(self):
+        while True:
+#            if self.X == 
         self.X = True
         
