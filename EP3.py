@@ -48,15 +48,19 @@ class Jogo:
 #                self.O += 1
 #        break
         
-    def limpa_jogo(self):
+    def limpa_jogada(self):
         self.tabuleiro = np.zeros([3,3])
+        #k e l estão com valores genéricos para poder entrar na função
+        #Quando entrarem na função seus valores serão alterados        
+        k=0
+        l=0
         self.recebe_jogada(k,l)
         
     def pergunta_jogada(self):
-        j = int(input("Onde deseja jogar? "))
+        j = int(input("Onde deseja jogar? ")) #onde deseja colocar X ou O
         if j == 1:
-            k = 0
-            l = 0
+            k = 0             #k = linhas
+            l = 0             #l = colunas
             return (k, l)
 
         elif j == 2:
@@ -100,14 +104,41 @@ class Jogo:
         a = 1
         for i in range(10):
             if a == 1: 
-                j = int(input("Onde deseja jogar? "))
+                k, l = self.pergunta_jogada()
                 self.tabuleiro[k,l] = 1
+                continuacao = self.verifica_ganhador()
+                if not continuacao == -1:
+                    break
                 a += 1
             elif a == 2:
-                j = int(input("Onde deseja jogar? "))
+                k, l = self.pergunta_jogada()
                 self.tabuleiro[k,l] = 2
+                continuacao = self.verifica_ganhador()
+                if not continuacao == -1:
+                    break
                 a -= 1
                 
+    def verifica_ganhador(self):
+        if self.tabuleiro[0,0] == self.tabuleiro[0,1] and self.tabuleiro[0,1] == self.tabuleiro[0,2]:
+            if self.tabuleiro[0,0] == 1:
+                return 1
+            elif self.tabuleiro[0,0] == 2:
+                return 2
+        elif self.tabuleiro[1,0] == self.tabuleiro[1,1] and self.tabuleiro[1,1] == self.tabuleiro[1,2]:
+            if self.tabuleiro[1,0] == 1:
+                return 1
+            elif self.tabuleiro[1,0] == 2:
+                return 2
+#        ..............
+        for k in range(self.tabuleiro.shape[0]):
+            for l in range(self.tabuleiro.shape[1]):
+                if self.tabuleiro[k,l] == 0:
+                    return -1
+        return 0
+                
+    
+    
+    
 velha = Jogo()
 velha.limpa_jogo()
 #          
