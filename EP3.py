@@ -12,14 +12,18 @@ import numpy as np
 class Jogo:
     """Classe que representa o gerenciamento do jogo"""
     
-    def __init__(self, X, O, vazio, tabuleiro):
+    def __init__(self, X, O, vazio, tabuleiro, turn):
         self.X = X
         self.O = O
         self.vazio = vazio
         self.tabuleiro = tabuleiro
+        self.turn = turn
         
     def tabuleiro(self):
-        self.tabuleiro = np.zeros((3,3))
+        self.tabuleiro = np.zeros([3,3])
+        for i in range(1,10):
+            self.X
+        
          
     def verifica_ganhador(self):
         if self.tabuleiro == self.vazio:
@@ -34,3 +38,13 @@ class Jogo:
 #            if self.X == 
 #        self.X = True
         
+#    def recebe_jogada(self):
+#        while True:
+#            jogada = 1
+#            while 1 <= 10:
+#                self.X.append(self.tabuleiro)
+#                self.O.append(self.tabuleiro)
+#                self.X += 1
+#                self.O += 1
+#        break
+#        
