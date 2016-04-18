@@ -93,12 +93,18 @@ class jogo_da_velha:
 
     def clicar_botao(self, event, botao):
         self.proxima_jogada()
-        self.transforma_botao_label(self.botao)
+        #self.transforma_botao_label(self.botao)
+        
         
     def transforma_botao_label(self,botao):
-        self.botao = tk.Label(self.window)
-        self.botao.configure(text='hhh')
+        #self.botao = tk.Label(self.window)
+        #self.botao.configure(text='hhh')
+        pass
     
+    #Muitas coisas para serem alteradas!!!!
+    #Mexer em todas as funções já definidas
+    #Descobrir como alterar o texto do botão e como transformar um botão em label
+    #Descobrir como colocar bordas!
 
 jogo = jogo_da_velha()
 jogo.iniciar()
