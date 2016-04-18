@@ -12,12 +12,13 @@ import numpy as np
 class Jogo:
     """Classe que representa o gerenciamento do jogo"""
     
-    def __init__(self, X, O, vazio, tabuleiro, turn):
-        self.X = X
-        self.O = O
-        self.vazio = vazio
+#    def __init__(self, X, O, vazio, tabuleiro, turn):
+    def __init__(self, tabuleiro):
+#        self.X = X
+#        self.O = O
+#        self.vazio = vazio
         self.tabuleiro = tabuleiro
-        self.turn = turn
+#        self.turn = turn
         
 #    def tabuleiro(self):
 #        self.tabuleiro = np.zeros([3,3])
@@ -55,6 +56,7 @@ class Jogo:
         k=0
         l=0
         self.recebe_jogada(k,l)
+        print(self.tabuleiro)
         
     def pergunta_jogada(self):
         j = int(input("Onde deseja jogar? ")) #onde deseja colocar X ou O
@@ -108,15 +110,19 @@ class Jogo:
                 self.tabuleiro[k,l] = 1
                 continuacao = self.verifica_ganhador()
                 if not continuacao == -1:
+                    print(self.tabuleiro)
                     break
                 a += 1
+                print(self.tabuleiro)
             elif a == 2:
                 k, l = self.pergunta_jogada()
                 self.tabuleiro[k,l] = 2
                 continuacao = self.verifica_ganhador()
                 if not continuacao == -1:
+                    print(self.tabuleiro)
                     break
                 a -= 1
+                print(self.tabuleiro)
                 
     def verifica_ganhador(self):
         if self.tabuleiro[0,0] == self.tabuleiro[0,1] and self.tabuleiro[0,1] == self.tabuleiro[0,2]:
@@ -124,12 +130,49 @@ class Jogo:
                 return 1
             elif self.tabuleiro[0,0] == 2:
                 return 2
+    
         elif self.tabuleiro[1,0] == self.tabuleiro[1,1] and self.tabuleiro[1,1] == self.tabuleiro[1,2]:
             if self.tabuleiro[1,0] == 1:
                 return 1
             elif self.tabuleiro[1,0] == 2:
                 return 2
-#        ..............
+                
+        elif self.tabuleiro[2,0] == self.tabuleiro[2,1] and self.tabuleiro[2,1] == self.tabuleiro[2,2]:
+            if self.tabuleiro[2,0] == 1:
+                return 1
+            elif self.tabuleiro[2,0] == 2:
+                return 2
+                
+        elif self.tabuleiro[0,0] == self.tabuleiro[1,0] and self.tabuleiro[1,0] == self.tabuleiro[2,0]:
+            if self.tabuleiro[0,0] == 1:
+                return 1
+            elif self.tabuleiro[0,0] == 2:
+                return 2
+                
+        elif self.tabuleiro[0,1] == self.tabuleiro[1,1] and self.tabuleiro[1,1] == self.tabuleiro[2,1]:
+            if self.tabuleiro[0,1] == 1:
+                return 1
+            elif self.tabuleiro[0,1] == 2:
+                return 2
+                
+        elif self.tabuleiro[0,2] == self.tabuleiro[1,2] and self.tabuleiro[1,2] == self.tabuleiro[2,2]:
+            if self.tabuleiro[1,2] == 1:
+                return 1
+            elif self.tabuleiro[1,2] == 2:
+                return 2
+                
+        elif self.tabuleiro[0,0] == self.tabuleiro[1,1] and self.tabuleiro[1,1] == self.tabuleiro[2,2]:
+            if self.tabuleiro[1,1] == 1:
+                return 1
+            elif self.tabuleiro[1,1] == 2:
+                return 2
+                
+        elif self.tabuleiro[0,2] == self.tabuleiro[1,1] and self.tabuleiro[1,1] == self.tabuleiro[2,0]:
+            if self.tabuleiro[1,1] == 1:
+                return 1
+            elif self.tabuleiro[1,1] == 2:
+                return 2
+                
         for k in range(self.tabuleiro.shape[0]):
             for l in range(self.tabuleiro.shape[1]):
                 if self.tabuleiro[k,l] == 0:
@@ -138,7 +181,9 @@ class Jogo:
                 
     
     
-    
-velha = Jogo()
-velha.limpa_jogo()
-#          
+matriz = np.array([[1,2,3],[4,5,6],[7,8,9]])
+print(matriz)
+print ('Para jogar escreve o numero onde deseja fazer a jogada!')
+velha = Jogo(np.zeros([3,3]))
+velha.limpa_jogada()
+
