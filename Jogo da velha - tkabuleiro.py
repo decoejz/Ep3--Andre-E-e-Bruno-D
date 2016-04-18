@@ -6,7 +6,6 @@ Created on Sun Apr 17 17:19:32 2016
 """
 
 import tkinter as tk
-import numnpy as *
 
 class jogo_da_velha:
     def __init__(self):
@@ -28,7 +27,7 @@ class jogo_da_velha:
         
         #Criando os nove botões do jogo
         self.botao1 = tk.Button(self.window)
-        self.botao1.configure(text='')
+        self.botao1.configure(text='1')
         self.botao1.grid(row=0,column=0, sticky='nsew')
         
         botao2 = tk.Button(self.window)
@@ -111,31 +110,3 @@ class jogo_da_velha:
 
 jogo = jogo_da_velha()
 jogo.iniciar()
-
-
-
-class Jogo():
-    class Jogo:
-    """Classe que representa o gerenciamento do jogo"""
-    
-    def __init__(self):
-        
-    def tabuleiro(self):
-        tabuleiro = zeros((3,3))
-         
-    def verifica_ganhador(self):
-         win = (
-                 set([1, 2, 3]),
-                 set([4, 5, 6]),
-                 set([7, 8, 9]),
-                 set([1, 4, 7]),
-                 set([2, 5, 8]),
-                 set([3, 6, 9]),
-                 set([1, 5, 9]),
-                 set([3, 5, 7]))
-    
-        
-    def troca_usuario(self):
-        
-    
-        
