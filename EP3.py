@@ -32,5 +32,5 @@ class Jogo:
     def troca_usuario(self):
         while True:
 #            if self.X == 
-        self.X = True
+#        self.X = True
         
