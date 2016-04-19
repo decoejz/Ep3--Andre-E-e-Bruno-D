@@ -13,8 +13,9 @@ import numpy as np
 class Jogo:
     """Classe que representa o gerenciamento do jogo"""
     
-    def __init__(self, tabuleiro):
+    def __init__(self, tabuleiro,jogador):
         self.tabuleiro = tabuleiro
+        self.jogador = jogador
         
         
       #função na qual cria o tabuleiro 'zerado' e ocorre um reset após ultima jogada
@@ -25,23 +26,25 @@ class Jogo:
             
      #função na qual troca de jogador a cada rodada
     def recebe_jogada(self, linha, coluna):
-        Troca_de_jogador = 1
+        self.tabuleiro = self.limpa_jogada()
         for i in range(10):
-            if Troca_de_jogador == 1: 
+            if self.jogador == 1: 
 #                linha, coluna = self.pergunta_jogada()
 #                self.tabuleiro[linha,coluna] = 1
+                self.tabuleiro[linha][coluna]=self.jogador
                 continuacao = self.verifica_ganhador()
                 if not continuacao == -1:
                     break
-                Troca_de_jogador += 1
+                self.jogador += 1
 
-            elif Troca_de_jogador == 2:
+            elif self.jogador == 2:
 #                linha, coluna = self.pergunta_jogada()
 #                self.tabuleiro[linha,coluna] = 2
+                self.tabuleiro[linha][coluna]=self.jogador
                 continuacao = self.verifica_ganhador()
                 if not continuacao == -1:
                     break
-                Troca_de_jogador -= 1
+                self.jogador -= 1
 
                 
                 
