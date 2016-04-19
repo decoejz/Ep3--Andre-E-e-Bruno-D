@@ -61,25 +61,15 @@ class jogo_da_velha:
         
                 
         #Fazendo a jogada:
-#        self.botao1.bind(self.clicar_botao('<Button-1>',self.botao1))
-#        self.botao2.bind(self.clicar_botao('<Button-1>',self.botao2))
-#        self.botao3.bind(self.clicar_botao('<Button-1>',self.botao3))
-#        self.botao4.bind(self.clicar_botao('<Button-1>',self.botao4))
-#        self.botao5.bind(self.clicar_botao('<Button-1>',self.botao5))
-#        self.botao6.bind(self.clicar_botao('<Button-1>',self.botao6))
-#        self.botao7.bind(self.clicar_botao('<Button-1>',self.botao7))
-#        self.botao8.bind(self.clicar_botao('<Button-1>',self.botao8))
-#        self.botao9.bind(self.clicar_botao('<Button-1>',self.botao9))
-        
-        self.botao1.bind('<Button-1>',self.clicar_botao)
-        self.botao2.bind('<Button-1>',self.clicar_botao)
-        self.botao3.bind('<Button-1>',self.clicar_botao)
-        self.botao4.bind('<Button-1>',self.clicar_botao)
-        self.botao5.bind('<Button-1>',self.clicar_botao)
-        self.botao6.bind('<Button-1>',self.clicar_botao)
-        self.botao7.bind('<Button-1>',self.clicar_botao)
-        self.botao8.bind('<Button-1>',self.clicar_botao)
-        self.botao9.bind('<Button-1>',self.clicar_botao)
+        self.botao1.bind('<Button-1>',self.clicar_botao_1)
+        self.botao2.bind('<Button-1>',self.clicar_botao_2)
+        self.botao3.bind('<Button-1>',self.clicar_botao_3)
+        self.botao4.bind('<Button-1>',self.clicar_botao_4)
+        self.botao5.bind('<Button-1>',self.clicar_botao_5)
+        self.botao6.bind('<Button-1>',self.clicar_botao_6)
+        self.botao7.bind('<Button-1>',self.clicar_botao_7)
+        self.botao8.bind('<Button-1>',self.clicar_botao_8)
+        self.botao9.bind('<Button-1>',self.clicar_botao_9)
 
 
     def iniciar(self):
@@ -96,17 +86,55 @@ class jogo_da_velha:
             self.proximo_jogador.set('Próxima jogada: O'.format(self.jogador))
             self.jogador -= 1
 
-    def clicar_botao(self, event):
-        #self.transforma_botao_label(botao)
+    def clicar_botao_1(self, event):
+        self.transforma_botao_label(self.botao1)
         #self.proxima_jogada()
         print ('oi')
-        #self.transforma_botao_label(self.botao)
         
+    def clicar_botao_2(self, event):
+        self.transforma_botao_label(self.botao2)
+        #self.proxima_jogada()
+        print ('oi')
+        
+        
+    def clicar_botao_3(self, event):
+        self.transforma_botao_label(self.botao3)
+        #self.proxima_jogada()
+        print ('oi')
+        
+    def clicar_botao_4(self, event):
+        self.transforma_botao_label(self.botao4)
+        #self.proxima_jogada()
+        print ('oi')
+        
+    def clicar_botao_5(self, event):
+        self.transforma_botao_label(self.botao5)
+        #self.proxima_jogada()
+        print ('oi')
+        
+    def clicar_botao_6(self, event):
+        self.transforma_botao_label(self.botao6)
+        #self.proxima_jogada()
+        print ('oi')
+        
+    def clicar_botao_7(self, event):
+        self.transforma_botao_label(self.botao7)
+        #self.proxima_jogada()
+        print ('oi')
+        
+    def clicar_botao_8(self, event):
+        self.transforma_botao_label(self.botao8)
+        #self.proxima_jogada()
+        print ('oi')
+        
+    def clicar_botao_9(self, event):
+        self.transforma_botao_label(self.botao9)
+        #self.proxima_jogada()
+        print ('oi')
         
     def transforma_botao_label(self,botao):
-        #self.botao = tk.Label(self.window)
-        #self.botao.configure(text='hhh')
-        pass
+        self.botao = tk.Label(self.window)
+        self.botao.configure(text='X')
     
     #Muitas coisas para serem alteradas!!!!
     #Descobrir como alterar o texto do botão e como transformar um botão em label
