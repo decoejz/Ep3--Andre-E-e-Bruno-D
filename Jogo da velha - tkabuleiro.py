@@ -90,7 +90,7 @@ class jogo_da_velha:
             self.botao1.configure(text = 'X')
         elif self.jogada_feita == 2:
             self.botao1.configure(text='O')
-        print ('oi')
+
         
     def clicar_botao_2(self, event):
         self.botao2 = tk.Label(self.window)
@@ -101,8 +101,6 @@ class jogo_da_velha:
         elif self.jogada_feita == 2:
             self.botao1.configure(text='O')
 
-        self.proxima_jogada()
-        print ('oi')
         
         
     def clicar_botao_3(self, event):
@@ -114,8 +112,6 @@ class jogo_da_velha:
         elif self.jogada_feita == 2:
             self.botao1.configure(text='O')
 
-        self.proxima_jogada()
-        print ('oi')
         
     def clicar_botao_4(self, event):
         self.botao4 = tk.Label(self.window)
@@ -126,8 +122,6 @@ class jogo_da_velha:
         elif self.jogada_feita == 2:
             self.botao1.configure(text='O')
 
-        self.proxima_jogada()
-        print ('oi')
         
     def clicar_botao_5(self, event):
         self.botao5 = tk.Label(self.window)
@@ -138,8 +132,6 @@ class jogo_da_velha:
         elif self.jogada_feita == 2:
             self.botao1.configure(text='O')
 
-        self.proxima_jogada()
-        print ('oi')
         
     def clicar_botao_6(self, event):
         self.botao6 = tk.Label(self.window)
@@ -150,8 +142,7 @@ class jogo_da_velha:
         elif self.jogada_feita == 2:
             self.botao1.configure(text='O')
 
-        self.proxima_jogada()
-        print ('oi')
+
         
     def clicar_botao_7(self, event):
         self.botao7 = tk.Label(self.window)
@@ -162,8 +153,7 @@ class jogo_da_velha:
         elif self.jogada_feita == 2:
             self.botao1.configure(text='O')
 
-        self.proxima_jogada()
-        print ('oi')
+
         
     def clicar_botao_8(self, event):
         self.botao8 = tk.Label(self.window)
@@ -174,8 +164,7 @@ class jogo_da_velha:
         elif self.jogada_feita == 2:
             self.botao1.configure(text='O')
 
-        #self.proxima_jogada()
-        print ('oi')
+
         
     def clicar_botao_9(self, event):
         self.botao9 = tk.Label(self.window)
@@ -185,8 +174,6 @@ class jogo_da_velha:
             self.botao1.configure(text = 'X')
         elif self.jogada_feita == 2:
             self.botao1.configure(text='O')
-        self.proxima_jogada()
-        print ('oi')
     
     #Muitas coisas para serem alteradas!!!!
     #Descobrir como alterar o texto do botão e como transformar um botão em label
