@@ -20,9 +20,9 @@ class Jogo:
         
       #função na qual cria o tabuleiro 'zerado' e ocorre um reset após ultima jogada
     def limpa_jogada(self):
-        self.tabuleiro = np.zeros([3,3])      
+        #self.tabuleiro = np.zeros([3,3])
+        return (np.zeros([3,3]))
 
-            
             
      #função na qual troca de jogador a cada rodada
     def recebe_jogada(self, linha, coluna):
