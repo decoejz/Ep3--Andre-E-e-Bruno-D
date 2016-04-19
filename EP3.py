@@ -9,6 +9,7 @@ Created on Sat Apr 16 07:07:47 2016
 
 import numpy as np
 
+
 class Jogo:
     """Classe que representa o gerenciamento do jogo"""
     
@@ -53,76 +54,77 @@ class Jogo:
         self.tabuleiro = np.zeros([3,3])
         #k e l estão com valores genéricos para poder entrar na função
         #Quando entrarem na função seus valores serão alterados        
-        k=0
-        l=0
-        self.recebe_jogada(k,l)
-        print(self.tabuleiro)
+        linha=0
+        coluna=0
+        self.recebe_jogada(linha, coluna)
+#        print(self.tabuleiro)
+        
         
     def pergunta_jogada(self):
-        j = int(input("Onde deseja jogar? ")) #onde deseja colocar X ou O
-        if j == 1:
-            k = 0             #k = linhas
-            l = 0             #l = colunas
-            return (k, l)
+        posicao = int(input("Onde deseja jogar? ")) #onde deseja colocar X ou O
+        if posicao == 1:
+            linha = 0 
+            coluna = 0  
+            return (linha, coluna)
 
-        elif j == 2:
-            k = 0
-            l = 1
-            return (k, l)
-        elif j == 3:
-            k = 0
-            l = 2
-            return (k, l)
-        elif j == 4:
-            k = 1
-            l = 0
-            return (k, l)
+        elif posicao == 2:
+            linha = 0
+            coluna = 1
+            return (linha, coluna)
+        elif posicao == 3:
+            linha = 0
+            coluna = 2
+            return (linha, coluna)
+        elif posicao == 4:
+            linha = 1
+            coluna = 0
+            return (linha, coluna)
             
-        elif j == 5:
-            k = 1
-            l = 1
-            return (k, l)
-        elif j == 6:
-            k = 1
-            l = 2
-            return (k, l)
-        elif j == 7:
-            k = 2
-            l = 0
-            return (k, l)
-        elif j == 8:
-            k = 2
-            l = 1
-            return (k, l)
-        elif j == 9:
-            k = 2
-            l = 2
-            return (k, l)
+        elif posicao == 5:
+            linha = 1
+            coluna = 1
+            return (linha, coluna)
+        elif posicao == 6:
+            linha = 1
+            coluna = 2
+            return (linha, coluna)
+        elif posicao == 7:
+            linha = 2
+            coluna = 0
+            return (linha, coluna)
+        elif posicao == 8:
+            linha = 2
+            coluna = 1
+            return (linha, coluna)
+        elif posicao == 9:
+            linha = 2
+            coluna = 2
+            return (linha, coluna)
         else:
             print("Escolha um numero de 1 a 9!")
             
 
-    def recebe_jogada(self, k, l):
-        a = 1
+    def recebe_jogada(self, linha, coluna):
+        Troca_de_jogador = 1
         for i in range(10):
-            if a == 1: 
-                k, l = self.pergunta_jogada()
-                self.tabuleiro[k,l] = 1
+            if Troca_de_jogador == 1: 
+                linha, coluna = self.pergunta_jogada()
+                self.tabuleiro[linha,coluna] = 1
                 continuacao = self.verifica_ganhador()
                 if not continuacao == -1:
-                    print(self.tabuleiro)
+#                    print(self.tabuleiro)
                     break
-                a += 1
-                print(self.tabuleiro)
-            elif a == 2:
-                k, l = self.pergunta_jogada()
-                self.tabuleiro[k,l] = 2
+                Troca_de_jogador += 1
+#                print(self.tabuleiro)
+            elif Troca_de_jogador == 2:
+                linha, coluna = self.pergunta_jogada()
+                self.tabuleiro[linha,coluna] = 2
                 continuacao = self.verifica_ganhador()
                 if not continuacao == -1:
-                    print(self.tabuleiro)
+#                    print(self.tabuleiro)
                     break
-                a -= 1
-                print(self.tabuleiro)
+                Troca_de_jogador -= 1
+#                print(self.tabuleiro)
                 
     def verifica_ganhador(self):
         if self.tabuleiro[0,0] == self.tabuleiro[0,1] and self.tabuleiro[0,1] == self.tabuleiro[0,2]:
@@ -173,17 +175,17 @@ class Jogo:
             elif self.tabuleiro[1,1] == 2:
                 return 2
                 
-        for k in range(self.tabuleiro.shape[0]):
-            for l in range(self.tabuleiro.shape[1]):
-                if self.tabuleiro[k,l] == 0:
+        for linha in range(self.tabuleiro.shape[0]):
+            for coluna in range(self.tabuleiro.shape[1]):
+                if self.tabuleiro[linha,coluna] == 0:
                     return -1
         return 0
                 
     
     
-matriz = np.array([[1,2,3],[4,5,6],[7,8,9]])
-print(matriz)
-print ('Para jogar escreve o numero onde deseja fazer a jogada!')
+#matriz = np.array([[1,2,3],[4,5,6],[7,8,9]])
+#print(matriz)
+#print ('Para jogar escreve o numero onde deseja fazer a jogada!')
 velha = Jogo(np.zeros([3,3]))
 velha.limpa_jogada()
 
