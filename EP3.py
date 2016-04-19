@@ -8,7 +8,7 @@ Created on Sat Apr 16 07:07:47 2016
 #EP3
 
 import numpy as np
-
+from sys import exit
 
 class Jogo:
     """Classe que representa o gerenciamento do jogo"""
