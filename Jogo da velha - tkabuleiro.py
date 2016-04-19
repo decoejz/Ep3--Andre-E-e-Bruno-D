@@ -87,54 +87,59 @@ class jogo_da_velha:
             self.jogador -= 1
 
     def clicar_botao_1(self, event):
-        self.transforma_botao_label(self.botao1)
+        self.botao1 = tk.Label(self.window)
+        self.botao1.configure(text='X')
         #self.proxima_jogada()
         print ('oi')
         
     def clicar_botao_2(self, event):
-        self.transforma_botao_label(self.botao2)
+        self.botao2 = tk.Label(self.window)
+        self.botao2.configure(text='X')
         #self.proxima_jogada()
         print ('oi')
         
         
     def clicar_botao_3(self, event):
-        self.transforma_botao_label(self.botao3)
+        self.botao3 = tk.Label(self.window)
+        self.botao3.configure(text='X')
         #self.proxima_jogada()
         print ('oi')
         
     def clicar_botao_4(self, event):
-        self.transforma_botao_label(self.botao4)
+        self.botao4 = tk.Label(self.window)
+        self.botao4.configure(text='X')
         #self.proxima_jogada()
         print ('oi')
         
     def clicar_botao_5(self, event):
-        self.transforma_botao_label(self.botao5)
+        self.botao5 = tk.Label(self.window)
+        self.botao5.configure(text='X')
         #self.proxima_jogada()
         print ('oi')
         
     def clicar_botao_6(self, event):
-        self.transforma_botao_label(self.botao6)
+        self.botao6 = tk.Label(self.window)
+        self.botao6.configure(text='X')
         #self.proxima_jogada()
         print ('oi')
         
     def clicar_botao_7(self, event):
-        self.transforma_botao_label(self.botao7)
+        self.botao7 = tk.Label(self.window)
+        self.botao7.configure(text='X')
         #self.proxima_jogada()
         print ('oi')
         
     def clicar_botao_8(self, event):
-        self.transforma_botao_label(self.botao8)
+        self.botao8 = tk.Label(self.window)
+        self.botao8.configure(text='X')
         #self.proxima_jogada()
         print ('oi')
         
     def clicar_botao_9(self, event):
-        self.transforma_botao_label(self.botao9)
+        self.botao9 = tk.Label(self.window)
+        self.botao9.configure(text='X')
         #self.proxima_jogada()
         print ('oi')
-        
-    def transforma_botao_label(self,botao):
-        self.botao = tk.Label(self.window)
-        self.botao.configure(text='X')
     
     #Muitas coisas para serem alteradas!!!!
     #Descobrir como alterar o texto do botão e como transformar um botão em label
