@@ -21,35 +21,8 @@ class Jogo:
         self.tabuleiro = tabuleiro
 #        self.turn = turn
         
-#    def tabuleiro(self):
-#        self.tabuleiro = np.zeros([3,3])
-#        for i in range(1,10):
-#            self.X
-#        
-#         
-#    def verifica_ganhador(self):
-#        if self.tabuleiro == self.vazio:
-#            print("Empate!")
-#        elif self.X == [0,1,2] or self.X == [3,4,5] or self.X == [6,7,8] or self.X == [0,3,6] or self.X == [1,4,7] or self.X == [2,5,8] or self.X == [0,4,8] or self.X == [2,4,6]:
-#            print("O jogador X venceu!")
-#        elif self.O == [0,1,2] or self.O == [3,4,5] or self.O == [6,7,8] or self.O == [0,3,6] or self.O == [1,4,7] or self.O == [2,5,8] or self.O == [0,4,8] or self.O == [2,4,6]:
-#            print("O jogador O venceu!")
-#        
-#    def troca_usuario(self):
-#        while True:
-#            if self.X == 
-#        self.X = True
-#        
-#    def recebe_jogada(self):
-#        while True:
-#            jogada = 1
-#            while 1 <= 10:
-#                self.X.append(self.tabuleiro)
-#                self.O.append(self.tabuleiro)
-#                self.X += 1
-#                self.O += 1
-#        break
         
+      #função na qual cria o tabuleiro 'zerado' e ocorre um reset após ultima jogada
     def limpa_jogada(self):
         self.tabuleiro = np.zeros([3,3])
         #k e l estão com valores genéricos para poder entrar na função
@@ -57,9 +30,21 @@ class Jogo:
         linha=0
         coluna=0
         self.recebe_jogada(linha, coluna)
-#        print(self.tabuleiro)
+        print(self.tabuleiro)
+        if self.recebe_jogada:
+            pergunta_reset = str(input("Deseja jogar novamente? "))
+            if pergunta_reset == "sim" or pergunta_reset == "Sim" or pergunta_reset == "SIM":
+                print(velha.limpa_jogada)
+            elif pergunta_reset == "nao" or pergunta_reset == "Nao" or pergunta_reset == "não" or pergunta_reset == "Não":
+                print("Obrigado por jogar!")
+                exit (0)
+            else:
+                print("Desculpe, não entendi, por isso vou embora...")
+                exit (0)
+            
         
-        
+      #função na qual o jogador escolhe qual posição irá assinalar,
+      #sendo que, as posições, de 1 a 9, são as posições de uma matriz
     def pergunta_jogada(self):
         posicao = int(input("Onde deseja jogar? ")) #onde deseja colocar X ou O
         if posicao == 1:
@@ -102,8 +87,10 @@ class Jogo:
             return (linha, coluna)
         else:
             print("Escolha um numero de 1 a 9!")
+            print("Por culpa desse bug, preciso recomeçar...")
+            print(velha.limpa_jogada)
             
-
+     #função na qual troca de jogador a cada rodada
     def recebe_jogada(self, linha, coluna):
         Troca_de_jogador = 1
         for i in range(10):
@@ -112,20 +99,21 @@ class Jogo:
                 self.tabuleiro[linha,coluna] = 1
                 continuacao = self.verifica_ganhador()
                 if not continuacao == -1:
-#                    print(self.tabuleiro)
+                    print(self.tabuleiro)
                     break
                 Troca_de_jogador += 1
-#                print(self.tabuleiro)
+                print(self.tabuleiro)
             elif Troca_de_jogador == 2:
                 linha, coluna = self.pergunta_jogada()
                 self.tabuleiro[linha,coluna] = 2
                 continuacao = self.verifica_ganhador()
                 if not continuacao == -1:
-#                    print(self.tabuleiro)
+                    print(self.tabuleiro)
                     break
                 Troca_de_jogador -= 1
-#                print(self.tabuleiro)
+                print(self.tabuleiro)
                 
+     #funçao na qual é verificado caso o jogador venceu, perdeu ou empatou           
     def verifica_ganhador(self):
         if self.tabuleiro[0,0] == self.tabuleiro[0,1] and self.tabuleiro[0,1] == self.tabuleiro[0,2]:
             if self.tabuleiro[0,0] == 1:
@@ -183,9 +171,9 @@ class Jogo:
                 
     
     
-#matriz = np.array([[1,2,3],[4,5,6],[7,8,9]])
-#print(matriz)
-#print ('Para jogar escreve o numero onde deseja fazer a jogada!')
+matriz = np.array([[1,2,3],[4,5,6],[7,8,9]])
+print(matriz)
+print ('Para jogar escreve o numero onde deseja fazer a jogada!')
 velha = Jogo(np.zeros([3,3]))
 velha.limpa_jogada()
 
