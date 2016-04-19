@@ -27,39 +27,30 @@ class jogo_da_velha:
         
         #Criando os nove botões do jogo
         self.botao1 = tk.Button(self.window, borderwidth=3)
-        #self.botao1.configure(text='1')
         self.botao1.grid(row=0,column=0, sticky='nsew')
         
         self.botao2 = tk.Button(self.window)
-        #self.botao2.configure(text='2')
         self.botao2.grid(row=0,column=1, sticky='nsew')
         
         self.botao3 = tk.Button(self.window)
-        #self.botao3.configure(text='3')
         self.botao3.grid(row=0,column=2, sticky='nsew')
 
         self.botao4 = tk.Button(self.window)
-        #self.botao4.configure(text='4')
         self.botao4.grid(row=1,column=0, sticky='nsew')
 
         self.botao5 = tk.Button(self.window)
-        #self.botao5.configure(text='5')
         self.botao5.grid(row=1,column=1, sticky='nsew')
 
         self.botao6 = tk.Button(self.window)
-        #self.botao6.configure(text='6')
         self.botao6.grid(row=1,column=2, sticky='nsew')
 
         self.botao7 = tk.Button(self.window)
-        #self.botao7.configure(text='7')
         self.botao7.grid(row=2,column=0, sticky='nsew')
         
         self.botao8 = tk.Button(self.window)
-        #self.botao8.configure(text='8')
         self.botao8.grid(row=2,column=1, sticky='nsew')
 
         self.botao9 = tk.Button(self.window)
-        #self.botao9.configure(text='9')
         self.botao9.grid(row=2,column=2, sticky='nsew')
 
         #Criando a caixa de texto que mostrará a próxima jogada
