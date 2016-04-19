@@ -174,5 +174,5 @@ class Jogo:
 #matriz = np.array([[1,2,3],[4,5,6],[7,8,9]])
 #print(matriz)
 #print ('Para jogar escreve o numero onde deseja fazer a jogada!')
-velha = Jogo(np.zeros([3,3]))
-velha.limpa_jogada()
+#velha = Jogo(np.zeros([3,3]))
+#velha.limpa_jogada()
