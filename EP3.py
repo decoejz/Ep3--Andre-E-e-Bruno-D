@@ -29,7 +29,7 @@ class Jogo:
         for i in range(10):
             if Troca_de_jogador == 1: 
 #                linha, coluna = self.pergunta_jogada()
-                self.tabuleiro[linha,coluna] = 1
+#                self.tabuleiro[linha,coluna] = 1
                 continuacao = self.verifica_ganhador()
                 if not continuacao == -1:
                     break
@@ -37,7 +37,7 @@ class Jogo:
 
             elif Troca_de_jogador == 2:
 #                linha, coluna = self.pergunta_jogada()
-                self.tabuleiro[linha,coluna] = 2
+#                self.tabuleiro[linha,coluna] = 2
                 continuacao = self.verifica_ganhador()
                 if not continuacao == -1:
                     break
