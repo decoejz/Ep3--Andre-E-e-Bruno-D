@@ -26,10 +26,9 @@ class jogo_da_velha:
         self.window.columnconfigure(2, minsize=100, weight=1)
         
         
-        self.jogod = EP3.Jogo()
+        self.jogod = EP3.Jogo(self.iniciar)
         
-
-#        
+        
         #Criando os nove botões do jogo
         self.botao1 = tk.Button(self.window, borderwidth=3)
         self.botao1.grid(row=0,column=0, sticky='nsew')
@@ -82,16 +81,7 @@ class jogo_da_velha:
         self.proxima_jogada(1)
         
     def proxima_jogada(self,jogador):
-        self.jogod.verifica_ganhador()        
-        
-#        #O número 1 equivale ao jogador x
-#        #O número 2 equivale ao jogador O
-#        if self.jogador == 1:
-#            self.proximo_jogador.set('Próxima jogada: X'.format(self.jogador))
-#            self.jogador += 1
-#        elif self.jogador == 2:
-#            self.proximo_jogador.set('Próxima jogada: O'.format(self.jogador))
-#            self.jogador -= 1
+        self.jogod.verifica_ganhador()
 
     def clicar_botao_1(self, event):
         self.botao1 = tk.Label(self.window)
