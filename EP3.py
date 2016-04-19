@@ -109,9 +109,9 @@ class Jogo:
 #print(matriz)
 #print ('Para jogar escreve o numero onde deseja fazer a jogada!')
 #velha = Jogo(np.zeros([3,3]))
-<<<<<<< HEAD
+#<<<<<<< HEAD
 #velha.limpa_jogada()
-=======
+#=======
 #velha.limpa_jogada()
 
->>>>>>> 61ca0d1e234ae5f7703486df751b5f0e4e521265
+#>>>>>>> 61ca0d1e234ae5f7703486df751b5f0e4e521265
