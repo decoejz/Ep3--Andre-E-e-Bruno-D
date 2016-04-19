@@ -26,41 +26,41 @@ class jogo_da_velha:
 #        self.window.frame(borderwidth=10)
         
         #Criando os nove botões do jogo
-        self.botao1 = tk.Button(self.window)
-        self.botao1.configure(text='')
+        self.botao1 = tk.Button(self.window, borderwidth=3)
+        #self.botao1.configure(text='1')
         self.botao1.grid(row=0,column=0, sticky='nsew')
         
-        botao2 = tk.Button(self.window)
-        botao2.configure(text='2')
-        botao2.grid(row=0,column=1, sticky='nsew')
+        self.botao2 = tk.Button(self.window)
+        #self.botao2.configure(text='2')
+        self.botao2.grid(row=0,column=1, sticky='nsew')
         
-        botao3 = tk.Button(self.window)
-        botao3.configure(text='3')
-        botao3.grid(row=0,column=2, sticky='nsew')
+        self.botao3 = tk.Button(self.window)
+        #self.botao3.configure(text='3')
+        self.botao3.grid(row=0,column=2, sticky='nsew')
 
-        botao4 = tk.Button(self.window)
-        botao4.configure(text='4')
-        botao4.grid(row=1,column=0, sticky='nsew')
+        self.botao4 = tk.Button(self.window)
+        #self.botao4.configure(text='4')
+        self.botao4.grid(row=1,column=0, sticky='nsew')
 
-        botao5 = tk.Button(self.window)
-        botao5.configure(text='5')
-        botao5.grid(row=1,column=1, sticky='nsew')
+        self.botao5 = tk.Button(self.window)
+        #self.botao5.configure(text='5')
+        self.botao5.grid(row=1,column=1, sticky='nsew')
 
-        botao6 = tk.Button(self.window)
-        botao6.configure(text='6')
-        botao6.grid(row=1,column=2, sticky='nsew')
+        self.botao6 = tk.Button(self.window)
+        #self.botao6.configure(text='6')
+        self.botao6.grid(row=1,column=2, sticky='nsew')
 
-        botao7 = tk.Button(self.window)
-        botao7.configure(text='7')
-        botao7.grid(row=2,column=0, sticky='nsew')
+        self.botao7 = tk.Button(self.window)
+        #self.botao7.configure(text='7')
+        self.botao7.grid(row=2,column=0, sticky='nsew')
         
-        botao8 = tk.Button(self.window)
-        botao8.configure(text='8')
-        botao8.grid(row=2,column=1, sticky='nsew')
+        self.botao8 = tk.Button(self.window)
+        #self.botao8.configure(text='8')
+        self.botao8.grid(row=2,column=1, sticky='nsew')
 
-        botao9 = tk.Button(self.window)
-        botao9.configure(text='9')
-        botao9.grid(row=2,column=2, sticky='nsew')
+        self.botao9 = tk.Button(self.window)
+        #self.botao9.configure(text='9')
+        self.botao9.grid(row=2,column=2, sticky='nsew')
 
         #Criando a caixa de texto que mostrará a próxima jogada
         self.proximo_jogador = tk.StringVar()        
@@ -68,31 +68,47 @@ class jogo_da_velha:
         jogador.configure(textvariable = self.proximo_jogador)
         jogador.grid(row=3, sticky='w', columnspan = 3)
         
+                
         #Fazendo a jogada:
-        self.botao1.bind("<Button-1>", self.clicar_botao)
-        botao2.bind("<Button-1>", self.clicar_botao)
-        botao3.bind("<Button-1>", self.clicar_botao)
-        botao4.bind("<Button-1>", self.clicar_botao)
-        botao5.bind("<Button-1>", self.clicar_botao)
-        botao6.bind("<Button-1>", self.clicar_botao)
-        botao7.bind("<Button-1>", self.clicar_botao)
-        botao8.bind("<Button-1>", self.clicar_botao)
-        botao9.bind("<Button-1>", self.clicar_botao)
+#        self.botao1.bind(self.clicar_botao('<Button-1>',self.botao1))
+#        self.botao2.bind(self.clicar_botao('<Button-1>',self.botao2))
+#        self.botao3.bind(self.clicar_botao('<Button-1>',self.botao3))
+#        self.botao4.bind(self.clicar_botao('<Button-1>',self.botao4))
+#        self.botao5.bind(self.clicar_botao('<Button-1>',self.botao5))
+#        self.botao6.bind(self.clicar_botao('<Button-1>',self.botao6))
+#        self.botao7.bind(self.clicar_botao('<Button-1>',self.botao7))
+#        self.botao8.bind(self.clicar_botao('<Button-1>',self.botao8))
+#        self.botao9.bind(self.clicar_botao('<Button-1>',self.botao9))
+        
+        self.botao1.bind('<Button-1>',self.clicar_botao)
+        self.botao2.bind('<Button-1>',self.clicar_botao)
+        self.botao3.bind('<Button-1>',self.clicar_botao)
+        self.botao4.bind('<Button-1>',self.clicar_botao)
+        self.botao5.bind('<Button-1>',self.clicar_botao)
+        self.botao6.bind('<Button-1>',self.clicar_botao)
+        self.botao7.bind('<Button-1>',self.clicar_botao)
+        self.botao8.bind('<Button-1>',self.clicar_botao)
+        self.botao9.bind('<Button-1>',self.clicar_botao)
 
 
     def iniciar(self):
         self.window.mainloop()
-        self.proximo_jogador.set('Próxima jogada: X')
+        self.proxima_jogada(1)
         
-    def proxima_jogada(self):
-        self.jogador = 'X'
-        self.proximo_jogador.set('Próxima jogada: {0}'.format(self.jogador))
-        if '<Button-1>' == True:
-            self.jogador = 'O'
-            self.proximo_jogador.set('Próxima jogada: {0}'.format(self.jogador))
+    def proxima_jogada(self,jogador):
+        #O número 1 equivale ao jogador x
+        #O número 2 equivale ao jogador O
+        if self.jogador == 1:
+            self.proximo_jogador.set('Próxima jogada: X'.format(self.jogador))
+            self.jogador += 1
+        elif self.jogador == 2:
+            self.proximo_jogador.set('Próxima jogada: O'.format(self.jogador))
+            self.jogador -= 1
 
-    def clicar_botao(self, event, botao):
-        self.proxima_jogada()
+    def clicar_botao(self, event):
+        #self.transforma_botao_label(botao)
+        #self.proxima_jogada()
+        print ('oi')
         #self.transforma_botao_label(self.botao)
         
         
@@ -102,7 +118,6 @@ class jogo_da_velha:
         pass
     
     #Muitas coisas para serem alteradas!!!!
-    #Mexer em todas as funções já definidas
     #Descobrir como alterar o texto do botão e como transformar um botão em label
     #Descobrir como colocar bordas!
     
@@ -110,7 +125,3 @@ class jogo_da_velha:
 
 jogo = jogo_da_velha()
 jogo.iniciar()
-
-
-    
-        
