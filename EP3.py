@@ -176,4 +176,3 @@ print(matriz)
 print ('Para jogar escreve o numero onde deseja fazer a jogada!')
 velha = Jogo(np.zeros([3,3]))
 velha.limpa_jogada()
-

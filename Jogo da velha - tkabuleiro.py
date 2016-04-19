@@ -6,6 +6,8 @@ Created on Sun Apr 17 17:19:32 2016
 """
 
 import tkinter as tk
+#Importando o código do jogo
+#import EP3
 
 class jogo_da_velha:
     def __init__(self):
@@ -22,6 +24,10 @@ class jogo_da_velha:
         self.window.columnconfigure(0, minsize=100, weight=1)
         self.window.columnconfigure(1, minsize=100, weight=1)
         self.window.columnconfigure(2, minsize=100, weight=1)
+        
+        
+#        self.jogod = EP3.Jogo()
+        
 
 #        self.window.frame(borderwidth=10)
         
@@ -89,12 +95,13 @@ class jogo_da_velha:
     def clicar_botao_1(self, event):
         self.botao1 = tk.Label(self.window)
         self.botao1.configure(text='X')
+        self.botao1.configure(state='disabled')
         #self.proxima_jogada()
         print ('oi')
         
     def clicar_botao_2(self, event):
         self.botao2 = tk.Label(self.window)
-        self.botao2.configure(text='X')
+        self.botao2.config(text='X')
         #self.proxima_jogada()
         print ('oi')
         
@@ -144,6 +151,8 @@ class jogo_da_velha:
     #Muitas coisas para serem alteradas!!!!
     #Descobrir como alterar o texto do botão e como transformar um botão em label
     #Descobrir como colocar bordas!
+    
+    #DICA!!!
     
     
 
