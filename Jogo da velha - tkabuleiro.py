@@ -26,10 +26,10 @@ class jogo_da_velha:
         self.window.columnconfigure(2, minsize=100, weight=1)
         
         
-#        self.jogod = EP3.Jogo()
+        self.jogod = EP3.Jogo()
         
 
-#        self.window.frame(borderwidth=10)
+        self.window.frame(borderwidth=10)
         
         #Criando os nove botões do jogo
         self.botao1 = tk.Button(self.window, borderwidth=3)
@@ -151,9 +151,6 @@ class jogo_da_velha:
     #Muitas coisas para serem alteradas!!!!
     #Descobrir como alterar o texto do botão e como transformar um botão em label
     #Descobrir como colocar bordas!
-    
-    #DICA!!!
-    
     
 
 jogo = jogo_da_velha()
