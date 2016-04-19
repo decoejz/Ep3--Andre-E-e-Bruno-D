@@ -28,23 +28,21 @@ class Jogo:
         Troca_de_jogador = 1
         for i in range(10):
             if Troca_de_jogador == 1: 
-                linha, coluna = self.pergunta_jogada()
+#                linha, coluna = self.pergunta_jogada()
                 self.tabuleiro[linha,coluna] = 1
                 continuacao = self.verifica_ganhador()
                 if not continuacao == -1:
-#                    print(self.tabuleiro)
                     break
                 Troca_de_jogador += 1
-#                print(self.tabuleiro)
+
             elif Troca_de_jogador == 2:
-                linha, coluna = self.pergunta_jogada()
+#                linha, coluna = self.pergunta_jogada()
                 self.tabuleiro[linha,coluna] = 2
                 continuacao = self.verifica_ganhador()
                 if not continuacao == -1:
-#                    print(self.tabuleiro)
                     break
                 Troca_de_jogador -= 1
-#                print(self.tabuleiro)
+
                 
                 
      #funçao na qual é verificado caso o jogador venceu, perdeu ou empatou           
@@ -102,16 +100,4 @@ class Jogo:
                 if self.tabuleiro[linha,coluna] == 0:
                     return -1
         return 0
-                
-    
-    
-#matriz = np.array([[1,2,3],[4,5,6],[7,8,9]])
-#print(matriz)
-#print ('Para jogar escreve o numero onde deseja fazer a jogada!')
-#velha = Jogo(np.zeros([3,3]))
-#<<<<<<< HEAD
-#velha.limpa_jogada()
-#=======
-#velha.limpa_jogada()
 
-#>>>>>>> 61ca0d1e234ae5f7703486df751b5f0e4e521265
