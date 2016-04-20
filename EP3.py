@@ -27,7 +27,7 @@ class Jogo:
      #função na qual troca de jogador a cada rodada
     def recebe_jogada(self, linha, coluna):
         self.tabuleiro = self.limpa_jogada()
-        for i in range(10):
+        for i in range(9):
             if self.jogador == 1: 
 #                linha, coluna = self.pergunta_jogada()
 #                self.tabuleiro[linha,coluna] = 1
