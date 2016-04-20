@@ -16,6 +16,7 @@ class Jogo:
     def __init__(self, tabuleiro,jogador):
         self.tabuleiro = tabuleiro
         self.jogador = jogador
+        self.tabuleiro = np.zeros([3,3])        
         
         
       #função na qual cria o tabuleiro 'zerado' e ocorre um reset após ultima jogada
