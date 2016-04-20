@@ -13,7 +13,7 @@ class jogo_da_velha:
     def __init__(self):
         self.window = tk.Tk()
         self.window.title('Jogo da Velha')
-        self.window.geometry("300x350+550+70")
+        self.window.geometry("300x350+600+55")
         
         #Criando as linhas e colunas do jogo
         self.window.rowconfigure(0, minsize=100, weight=1)
@@ -94,9 +94,9 @@ class jogo_da_velha:
         #self.botao2.config(text='X')
         self.jogod.recebe_jogada(0,1)
         if self.jogod.jogador == 1:
-            self.botao1.configure(text = 'X')
+            self.botao2.configure(text = 'X')
         elif self.jogod.jogador == 2:
-            self.botao1.configure(text='O')
+            self.botao2.configure(text='O')
 
         
         
@@ -105,9 +105,9 @@ class jogo_da_velha:
         #self.botao3.configure(text='X')
         self.jogod.recebe_jogada(0,2)
         if self.jogod.jogador == 1:
-            self.botao1.configure(text = 'X')
+            self.botao3.configure(text = 'X')
         elif self.jogod.jogador == 2:
-            self.botao1.configure(text='O')
+            self.botao3.configure(text='O')
 
         
     def clicar_botao_4(self, event):
@@ -115,9 +115,9 @@ class jogo_da_velha:
         #self.botao4.configure(text='X')
         self.jogod.recebe_jogada(1,0)
         if self.jogod.jogador == 1:
-            self.botao1.configure(text = 'X')
+            self.botao4.configure(text = 'X')
         elif self.jogod.jogador == 2:
-            self.botao1.configure(text='O')
+            self.botao4.configure(text='O')
 
         
     def clicar_botao_5(self, event):
@@ -125,9 +125,9 @@ class jogo_da_velha:
         #self.botao5.configure(text='X')
         self.jogod.recebe_jogada(1,1)
         if self.jogod.jogador == 1:
-            self.botao1.configure(text = 'X')
+            self.botao5.configure(text = 'X')
         elif self.jogod.jogador == 2:
-            self.botao1.configure(text='O')
+            self.botao5.configure(text='O')
 
         
     def clicar_botao_6(self, event):
@@ -135,9 +135,9 @@ class jogo_da_velha:
         #self.botao6.configure(text='X')
         self.jogod.recebe_jogada(1,2)
         if self.jogod.jogador == 1:
-            self.botao1.configure(text = 'X')
+            self.botao6.configure(text = 'X')
         elif self.jogod.jogador == 2:
-            self.botao1.configure(text='O')
+            self.botao6.configure(text='O')
 
 
         
@@ -146,9 +146,9 @@ class jogo_da_velha:
         #self.botao7.configure(text='X')
         self.jogod.recebe_jogada(2,0)
         if self.jogod.jogador == 1:
-            self.botao1.configure(text = 'X')
+            self.botao7.configure(text = 'X')
         elif self.jogod.jogador == 2:
-            self.botao1.configure(text='O')
+            self.botao7.configure(text='O')
 
 
         
@@ -157,9 +157,9 @@ class jogo_da_velha:
         #self.botao8.configure(text='X')
         self.jogod.recebe_jogada(2,1)
         if self.jogod.jogador == 1:
-            self.botao1.configure(text = 'X')
+            self.botao8.configure(text = 'X')
         elif self.jogod.jogador == 2:
-            self.botao1.configure(text='O')
+            self.botao8.configure(text='O')
 
 
         
@@ -168,9 +168,9 @@ class jogo_da_velha:
         #self.botao9.configure(text='X')
         self.jogod.recebe_jogada(2,2)
         if self.jogod.jogador == 1:
-            self.botao1.configure(text = 'X')
+            self.botao9.configure(text = 'X')
         elif self.jogod.jogador == 2:
-            self.botao1.configure(text='O')
+            self.botao9.configure(text='O')
     
     #Muitas coisas para serem alteradas!!!!
     #Descobrir como alterar o texto do botão e como transformar um botão em label
