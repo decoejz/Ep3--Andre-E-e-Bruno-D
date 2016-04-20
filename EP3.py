@@ -27,10 +27,8 @@ class Jogo:
      #função na qual troca de jogador a cada rodada
     def recebe_jogada(self, linha, coluna):
         self.tabuleiro = self.limpa_jogada()
-        for i in range(10):
+        for i in range(9):
             if self.jogador == 1: 
-#                linha, coluna = self.pergunta_jogada()
-#                self.tabuleiro[linha,coluna] = 1
                 self.tabuleiro[linha][coluna]=self.jogador
                 continuacao = self.verifica_ganhador()
                 if not continuacao == -1:
@@ -38,8 +36,6 @@ class Jogo:
                 self.jogador += 1
 
             elif self.jogador == 2:
-#                linha, coluna = self.pergunta_jogada()
-#                self.tabuleiro[linha,coluna] = 2
                 self.tabuleiro[linha][coluna]=self.jogador
                 continuacao = self.verifica_ganhador()
                 if not continuacao == -1:
