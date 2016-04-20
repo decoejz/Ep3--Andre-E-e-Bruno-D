@@ -26,7 +26,7 @@ class jogo_da_velha:
         self.window.columnconfigure(2, minsize=100, weight=1)
         
         
-        self.jogod = EP3.Jogo(self.iniciar,1)
+        self.jogod = EP3.Jogo(self.tabuleiro,1)
         
 
         #Criando os nove botões do jogo
@@ -78,6 +78,9 @@ class jogo_da_velha:
 
     def iniciar(self):
         self.window.mainloop()
+        
+    def tabuleiro(self):
+        self.jogod.limpa_jogada()
 
     def clicar_botao_1(self, event):
         self.botao1.configure(state='disabled')

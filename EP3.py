@@ -45,6 +45,7 @@ class Jogo:
                 if not continuacao == -1:
                     break
                 self.jogador -= 1
+            print(self.tabuleiro)
 
                 
                 
