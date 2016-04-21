@@ -104,8 +104,6 @@ class jogo_da_velha:
         
         self.botao1.configure(state='disabled')
         
-        
-        
     def clicar_botao_2(self, event):
         self.jogod.recebe_jogada(0,1)
         if self.jogod.jogador == 1:
