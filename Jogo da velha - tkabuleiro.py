@@ -14,6 +14,7 @@ import tkinter.messagebox as tkm
 
 class jogo_da_velha:
     def __init__(self):
+        #Criando a janela gráfica e suas diretrizes
         self.window = tk.Tk()
         self.window.title('Jogo da Velha')
         self.window.geometry("300x350+600+55")
@@ -28,7 +29,7 @@ class jogo_da_velha:
         self.window.columnconfigure(1, minsize=100, weight=1)
         self.window.columnconfigure(2, minsize=100, weight=1)
         
-        
+        #Importando o jogo para o tabuleiro em interface gráfica
         self.jogod = EP3.Jogo()
         
 
@@ -67,16 +68,16 @@ class jogo_da_velha:
         jogador.grid(row=3, sticky='w', columnspan = 3)
         self.label_proximo_jogador('X')
                 
-        #Fazendo a jogada:
-        self.botao1.bind('<Button-1>',self.clicar_botao_1)
-        self.botao2.bind('<Button-1>',self.clicar_botao_2)
-        self.botao3.bind('<Button-1>',self.clicar_botao_3)
-        self.botao4.bind('<Button-1>',self.clicar_botao_4)
-        self.botao5.bind('<Button-1>',self.clicar_botao_5)
-        self.botao6.bind('<Button-1>',self.clicar_botao_6)
-        self.botao7.bind('<Button-1>',self.clicar_botao_7)
-        self.botao8.bind('<Button-1>',self.clicar_botao_8)
-        self.botao9.bind('<Button-1>',self.clicar_botao_9)
+        #Apertando o botão direito do mouse em cada botão do jogo.
+        self.botao1.bind('<1>',self.clicar_botao_1)
+        self.botao2.bind('<1>',self.clicar_botao_2)
+        self.botao3.bind('<1>',self.clicar_botao_3)
+        self.botao4.bind('<1>',self.clicar_botao_4)
+        self.botao5.bind('<1>',self.clicar_botao_5)
+        self.botao6.bind('<1>',self.clicar_botao_6)
+        self.botao7.bind('<1>',self.clicar_botao_7)
+        self.botao8.bind('<1>',self.clicar_botao_8)
+        self.botao9.bind('<1>',self.clicar_botao_9)
 
 
     def iniciar(self):
@@ -89,10 +90,10 @@ class jogo_da_velha:
     def clicar_botao_1(self, event):
         self.jogod.recebe_jogada(0,0)
         if self.jogod.jogador == 1:
-            self.botao1.configure(text='O')
+            self.botao1.configure(text='O',font='arial 100')
             self.label_proximo_jogador('X')
         elif self.jogod.jogador == 2:
-            self.botao1.configure(text='X')
+            self.botao1.configure(text='X',font='arial 100')
             self.label_proximo_jogador('O')
         
         if self.jogod.verifica_ganhador() == 1:
@@ -107,10 +108,10 @@ class jogo_da_velha:
     def clicar_botao_2(self, event):
         self.jogod.recebe_jogada(0,1)
         if self.jogod.jogador == 1:
-            self.botao2.configure(text='O')
+            self.botao2.configure(text='O',font='arial 100')
             self.label_proximo_jogador('X')
         elif self.jogod.jogador == 2:
-            self.botao2.configure(text='X')
+            self.botao2.configure(text='X',font='arial 100')
             self.label_proximo_jogador('O')
         
         if self.jogod.verifica_ganhador() == 1:
@@ -125,10 +126,10 @@ class jogo_da_velha:
     def clicar_botao_3(self, event):
         self.jogod.recebe_jogada(0,2)
         if self.jogod.jogador == 1:
-            self.botao3.configure(text='O')
+            self.botao3.configure(text='O',font='arial 100')
             self.label_proximo_jogador('X')
         elif self.jogod.jogador == 2:
-            self.botao3.configure(text='X')
+            self.botao3.configure(text='X',font='arial 100')
             self.label_proximo_jogador('O')
        
         if self.jogod.verifica_ganhador() == 1:
@@ -143,10 +144,10 @@ class jogo_da_velha:
     def clicar_botao_4(self, event):
         self.jogod.recebe_jogada(1,0)
         if self.jogod.jogador == 1:
-            self.botao4.configure(text='O')
+            self.botao4.configure(text='O',font='arial 100')
             self.label_proximo_jogador('X')
         elif self.jogod.jogador == 2:
-            self.botao4.configure(text='X')
+            self.botao4.configure(text='X',font='arial 100')
             self.label_proximo_jogador('O')
         
         if self.jogod.verifica_ganhador() == 1:
@@ -161,10 +162,10 @@ class jogo_da_velha:
     def clicar_botao_5(self, event):
         self.jogod.recebe_jogada(1,1)
         if self.jogod.jogador == 1:
-            self.botao5.configure(text='O')
+            self.botao5.configure(text='O',font='arial 100')
             self.label_proximo_jogador('X')
         elif self.jogod.jogador == 2:
-            self.botao5.configure(text='X')
+            self.botao5.configure(text='X',font='arial 100')
             self.label_proximo_jogador('O')
         
         if self.jogod.verifica_ganhador() == 1:
@@ -179,10 +180,10 @@ class jogo_da_velha:
     def clicar_botao_6(self, event):
         self.jogod.recebe_jogada(1,2)
         if self.jogod.jogador == 1:
-            self.botao6.configure(text='O')
+            self.botao6.configure(text='O',font='arial 100')
             self.label_proximo_jogador('X')
         elif self.jogod.jogador == 2:
-            self.botao6.configure(text='X')
+            self.botao6.configure(text='X',font='arial 100')
             self.label_proximo_jogador('O')
         
         if self.jogod.verifica_ganhador() == 1:
@@ -197,10 +198,10 @@ class jogo_da_velha:
     def clicar_botao_7(self, event):
         self.jogod.recebe_jogada(2,0)
         if self.jogod.jogador == 1:
-            self.botao7.configure(text='O')
+            self.botao7.configure(text='O',font='arial 100')
             self.label_proximo_jogador('X')
         elif self.jogod.jogador == 2:
-            self.botao7.configure(text='X')
+            self.botao7.configure(text='X',font='arial 100')
             self.label_proximo_jogador('O')
         
         if self.jogod.verifica_ganhador() == 1:
@@ -215,10 +216,10 @@ class jogo_da_velha:
     def clicar_botao_8(self, event):
         self.jogod.recebe_jogada(2,1)
         if self.jogod.jogador == 1:
-            self.botao8.configure(text='O')
+            self.botao8.configure(text='O',font='arial 100')
             self.label_proximo_jogador('X')
         elif self.jogod.jogador == 2:
-            self.botao8.configure(text='X')
+            self.botao8.configure(text='X',font='arial 100')
             self.label_proximo_jogador('O')
         
         if self.jogod.verifica_ganhador() == 1:
@@ -233,10 +234,10 @@ class jogo_da_velha:
     def clicar_botao_9(self, event):
         self.jogod.recebe_jogada(2,2)
         if self.jogod.jogador == 1:
-            self.botao9.configure(text='O')
+            self.botao9.configure(text='O',font='arial 100')
             self.label_proximo_jogador('X')
         elif self.jogod.jogador == 2:
-            self.botao9.configure(text='X')
+            self.botao9.configure(text='X',font='arial 100')
             self.label_proximo_jogador('O')
         
         if self.jogod.verifica_ganhador() == 1:
