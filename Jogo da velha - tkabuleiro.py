@@ -31,10 +31,9 @@ class jogo_da_velha:
         
         #Importando o jogo para o tabuleiro em interface gráfica
         self.jogod = EP3.Jogo()
-        
 
         #Criando os nove botões do jogo
-        self.botao1 = tk.Button(self.window, borderwidth=3)
+        self.botao1 = tk.Button(self.window)
         self.botao1.grid(row=0,column=0, sticky='nsew')
         
         self.botao2 = tk.Button(self.window)
@@ -79,8 +78,8 @@ class jogo_da_velha:
         self.botao8.bind('<1>',self.clicar_botao_8)
         self.botao9.bind('<1>',self.clicar_botao_9)
 
-
     def iniciar(self):
+        self.jogod.limpa_jogadas()
         self.window.mainloop()
     
     #Como ao ler a função recebe_jogada o computador troca o jogador,
@@ -231,6 +230,7 @@ class jogo_da_velha:
         elif self.jogod.verifica_ganhador() == 0:
             tkm.showinfo(title='Vencedor',message='O jogo empatou')
             self.novo_jogo()
+            
         
         self.botao7.configure(state='disabled')
                 
@@ -278,34 +278,17 @@ class jogo_da_velha:
         
     def label_proximo_jogador(self,jogada_de):
         self.proximo_jogador.set('Próxima jogada: {0}'.format(jogada_de))
-        
+    
+    #Função que faz aparecer uma tela de fim de jogo    
     def novo_jogo(self):
         
-        self.notificacao = tk.Toplevel()
-        self.notificacao.title('Vencedor')
-        self.notificacao.geometry("600X150+50+50")
+        self.recomecar = tkm.askyesno('Novo Jogo','Deseja jogar novamente?')
         
-        self.notificacao.rowconfigure(0, minsize = 75, weight = 1)
-        self.notificacao.rowconfigure(1, minsize = 75, weight = 1)
-        
-        self.notificacao.columnconfigure(0, minsize = 300, weight = 1)
-        self.notificacao.columnconfigure(1, minsize = 300, weight = 1)
-        
-        self.jogar_novamente = tk.Button(self.notificacao)
-        self.jogar_novamente.configure(text='Jogar novamente')
-        self.jogar_novamente.grid(row=1, column=0, sticky='nsew')
-        
-        self.sair_jogo = tk.Button(self.notificacao)
-        self.sair_jogo.configure(text='Sair')
-        self.sair_jogo.grid(row=1, column=1, sticky='nsew')
-            
-        
-        
-#        resposta = tkm.askquestion("Novo Jogo", "Deseja jogar novamente?")
-#        if resposta == 'yes':
-#            print ("novo jogo")
-#        else:
-#            print ("feio")
+        if self.recomecar == True:
+            self.window.destroy()
+            self.iniciar()
+        else:
+            self.window.destroy()
         
 jogo = jogo_da_velha()
 jogo.iniciar()
