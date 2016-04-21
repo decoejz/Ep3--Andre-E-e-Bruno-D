@@ -244,9 +244,10 @@ class jogo_da_velha:
             tkm.showinfo(title='Vencedor',message='X venceu')
         elif self.jogod.verifica_ganhador() == 2:
             tkm.showinfo(title='Vencedor',message='O venceu')
+            tkm.askyesno('Novo Jogo','Jogar novamente?')
         elif self.jogod.verifica_ganhador() == 0:
             tkm.showinfo(title='Vencedor',message='O jogo empatou')
-        
+
         self.botao9.configure(state='disabled')
         
     def label_proximo_jogador(self,jogada_de):
