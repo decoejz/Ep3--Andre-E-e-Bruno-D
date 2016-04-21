@@ -62,6 +62,7 @@ class jogo_da_velha:
         jogador = tk.Label(self.window)
         jogador.configure(textvariable = self.proximo_jogador)
         jogador.grid(row=3, sticky='w', columnspan = 3)
+        self.label_proximo_jogador('X')
                 
         #Fazendo a jogada:
         self.botao1.bind('<Button-1>',self.clicar_botao_1)
