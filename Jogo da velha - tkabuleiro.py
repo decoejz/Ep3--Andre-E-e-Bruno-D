@@ -89,10 +89,11 @@ class jogo_da_velha:
     def clicar_botao_1(self, event):
         self.jogod.recebe_jogada(0,0)
         if self.jogod.jogador == 1:
-            self.botao1.configure(text='O',font='arial 100')
+            self.espaco1 = tk.Label(self.window)
+            self.espaco1.grid(row=0, column=0, sticky='nsew')
+            self.espaco1.configure(text='O', font='arial 100')
             self.label_proximo_jogador('X')
         elif self.jogod.jogador == 2:
-            #self.botao1.destroy()
             self.espaco1 = tk.Label(self.window)
             self.espaco1.grid(row=0, column=0, sticky='nsew')
             self.espaco1.configure(text='X', font='arial 100')
@@ -111,12 +112,13 @@ class jogo_da_velha:
     def clicar_botao_2(self, event):
         self.jogod.recebe_jogada(0,1)
         if self.jogod.jogador == 1:
-            self.botao2.configure(text='O',font='arial 100')
+            self.espaco2 = tk.Label(self.window)
+            self.espaco2.grid(row=0, column=1, sticky='nsew')
+            self.espaco2.configure(text='O', font='arial 100')
             self.label_proximo_jogador('X')
         elif self.jogod.jogador == 2:
-            self.botao2.destroy()
             self.espaco2 = tk.Label(self.window)
-            self.espaco2.grid(row=2, column=2, sticky='nsew')
+            self.espaco2.grid(row=0, column=1, sticky='nsew')
             self.espaco2.configure(text='X', font='arial 100')
             self.label_proximo_jogador('O')
         
@@ -134,12 +136,13 @@ class jogo_da_velha:
     def clicar_botao_3(self, event):
         self.jogod.recebe_jogada(0,2)
         if self.jogod.jogador == 1:
-            self.botao3.configure(text='O',font='arial 100')
+            self.espaco3 = tk.Label(self.window)
+            self.espaco3.grid(row=0, column=2, sticky='nsew')
+            self.espaco3.configure(text='O', font='arial 100')
             self.label_proximo_jogador('X')
         elif self.jogod.jogador == 2:
-            self.botao3.destroy()
             self.espaco3 = tk.Label(self.window)
-            self.espaco3.grid(row=2, column=2, sticky='nsew')
+            self.espaco3.grid(row=0, column=2, sticky='nsew')
             self.espaco3.configure(text='X', font='arial 100')
             self.label_proximo_jogador('O')
        
@@ -157,12 +160,13 @@ class jogo_da_velha:
     def clicar_botao_4(self, event):
         self.jogod.recebe_jogada(1,0)
         if self.jogod.jogador == 1:
-            self.botao4.configure(text='O',font='arial 100')
+            self.espaco4 = tk.Label(self.window)
+            self.espaco4.grid(row=1, column=0, sticky='nsew')
+            self.espaco4.configure(text='O', font='arial 100')
             self.label_proximo_jogador('X')
         elif self.jogod.jogador == 2:
-            self.botao4.destroy()
             self.espaco4 = tk.Label(self.window)
-            self.espaco4.grid(row=2, column=2, sticky='nsew')
+            self.espaco4.grid(row=1, column=0, sticky='nsew')
             self.espaco4.configure(text='X', font='arial 100')
             self.label_proximo_jogador('O')
         
@@ -180,12 +184,13 @@ class jogo_da_velha:
     def clicar_botao_5(self, event):
         self.jogod.recebe_jogada(1,1)
         if self.jogod.jogador == 1:
-            self.botao5.configure(text='O',font='arial 100')
+            self.espaco5 = tk.Label(self.window)
+            self.espaco5.grid(row=1, column=1, sticky='nsew')
+            self.espaco5.configure(text='O', font='arial 100')
             self.label_proximo_jogador('X')
         elif self.jogod.jogador == 2:
-            self.botao5.destroy()
             self.espaco5 = tk.Label(self.window)
-            self.espaco5.grid(row=2, column=2, sticky='nsew')
+            self.espaco5.grid(row=1, column=1, sticky='nsew')
             self.espaco5.configure(text='X', font='arial 100')
             self.label_proximo_jogador('O')
         
@@ -203,12 +208,13 @@ class jogo_da_velha:
     def clicar_botao_6(self, event):
         self.jogod.recebe_jogada(1,2)
         if self.jogod.jogador == 1:
-            self.botao6.configure(text='O',font='arial 100')
+            self.espaco6 = tk.Label(self.window)
+            self.espaco6.grid(row=1, column=2, sticky='nsew')
+            self.espaco6.configure(text='O', font='arial 100')
             self.label_proximo_jogador('X')
         elif self.jogod.jogador == 2:
-            self.botao6.destroy()
             self.espaco6 = tk.Label(self.window)
-            self.espaco6.grid(row=2, column=2, sticky='nsew')
+            self.espaco6.grid(row=1, column=2, sticky='nsew')
             self.espaco6.configure(text='X', font='arial 100')
             self.label_proximo_jogador('O')
         
@@ -226,12 +232,13 @@ class jogo_da_velha:
     def clicar_botao_7(self, event):
         self.jogod.recebe_jogada(2,0)
         if self.jogod.jogador == 1:
-            self.botao7.configure(text='O',font='arial 100')
+            self.espaco7 = tk.Label(self.window)
+            self.espaco7.grid(row=2, column=0, sticky='nsew')
+            self.espaco7.configure(text='O', font='arial 100')
             self.label_proximo_jogador('X')
         elif self.jogod.jogador == 2:
-            self.botao7.destroy()
             self.espaco7 = tk.Label(self.window)
-            self.espaco7.grid(row=2, column=2, sticky='nsew')
+            self.espaco7.grid(row=2, column=0, sticky='nsew')
             self.espaco7.configure(text='X', font='arial 100')
             self.label_proximo_jogador('O')
         
@@ -250,12 +257,13 @@ class jogo_da_velha:
     def clicar_botao_8(self, event):
         self.jogod.recebe_jogada(2,1)
         if self.jogod.jogador == 1:
-            self.botao8.configure(text='O',font='arial 100')
+            self.espaco8 = tk.Label(self.window)
+            self.espaco8.grid(row=2, column=1, sticky='nsew')
+            self.espaco8.configure(text='O', font='arial 100')
             self.label_proximo_jogador('X')
         elif self.jogod.jogador == 2:
-            self.botao8.destroy()
             self.espaco8 = tk.Label(self.window)
-            self.espaco8.grid(row=2, column=2, sticky='nsew')
+            self.espaco8.grid(row=2, column=1, sticky='nsew')
             self.espaco8.configure(text='X', font='arial 100')
             self.label_proximo_jogador('O')
         
@@ -273,13 +281,11 @@ class jogo_da_velha:
     def clicar_botao_9(self, event):
         self.jogod.recebe_jogada(2,2)
         if self.jogod.jogador == 1:
-            self.botao9.destroy()
             self.espaco9 = tk.Label(self.window)
             self.espaco9.grid(row=2, column=2, sticky='nsew')
             self.espaco9.configure(text='O', font='arial 100')
             self.label_proximo_jogador('X')
         elif self.jogod.jogador == 2:
-            self.botao9.destroy()
             self.espaco9 = tk.Label(self.window)
             self.espaco9.grid(row=2, column=2, sticky='nsew')
             self.espaco9.configure(text='X', font='arial 100')
@@ -304,8 +310,7 @@ class jogo_da_velha:
         self.recomecar = tkm.askyesno('Novo Jogo','Deseja jogar novamente?')
         
         if self.recomecar == True:
-            self.window.destroy()
-            self.iniciar()
+            self.reiniciar = tk
         else:
             self.window.destroy()
         
