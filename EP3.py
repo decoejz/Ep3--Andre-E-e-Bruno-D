@@ -32,65 +32,65 @@ class Jogo:
             self.tabuleiro[linha][coluna]=self.jogador
             continuacao = self.verifica_ganhador()
             if not continuacao == -1:
-                self.jogador += 1
+                self.jogador = 2
 
         elif self.jogador == 2:
             self.tabuleiro[linha][coluna]=self.jogador
             continuacao = self.verifica_ganhador()
             if not continuacao == -1:
-                self.jogador -= 1
+                self.jogador = 1
         print(self.tabuleiro,'\n')
 
-                
+
                 
      #funçao na qual é verificado caso o jogador venceu, perdeu ou empatou           
     def verifica_ganhador(self):
-        if self.tabuleiro[0,0] == self.tabuleiro[0,1] and self.tabuleiro[0,1] == self.tabuleiro[0,2]:
-            if self.tabuleiro[0,0] == 1:
+        if self.tabuleiro[0][0] == self.tabuleiro[0][1] and self.tabuleiro[0][1] == self.tabuleiro[0][2]:
+            if self.tabuleiro[0][0] == 1:
                 return 1
-            elif self.tabuleiro[0,0] == 2:
+            elif self.tabuleiro[0][0] == 2:
                 return 2
     
-        elif self.tabuleiro[1,0] == self.tabuleiro[1,1] and self.tabuleiro[1,1] == self.tabuleiro[1,2]:
-            if self.tabuleiro[1,0] == 1:
+        elif self.tabuleiro[1][0] == self.tabuleiro[1][1] and self.tabuleiro[1][1] == self.tabuleiro[1][2]:
+            if self.tabuleiro[1][0] == 1:
                 return 1
-            elif self.tabuleiro[1,0] == 2:
+            elif self.tabuleiro[1][0] == 2:
                 return 2
                 
-        elif self.tabuleiro[2,0] == self.tabuleiro[2,1] and self.tabuleiro[2,1] == self.tabuleiro[2,2]:
-            if self.tabuleiro[2,0] == 1:
+        elif self.tabuleiro[2][0] == self.tabuleiro[2][1] and self.tabuleiro[2][1] == self.tabuleiro[2][2]:
+            if self.tabuleiro[2][0] == 1:
                 return 1
-            elif self.tabuleiro[2,0] == 2:
+            elif self.tabuleiro[2][0] == 2:
                 return 2
                 
-        elif self.tabuleiro[0,0] == self.tabuleiro[1,0] and self.tabuleiro[1,0] == self.tabuleiro[2,0]:
-            if self.tabuleiro[0,0] == 1:
+        elif self.tabuleiro[0][0] == self.tabuleiro[1][0] and self.tabuleiro[1][0] == self.tabuleiro[2][0]:
+            if self.tabuleiro[0][0] == 1:
                 return 1
-            elif self.tabuleiro[0,0] == 2:
+            elif self.tabuleiro[0][0] == 2:
                 return 2
                 
-        elif self.tabuleiro[0,1] == self.tabuleiro[1,1] and self.tabuleiro[1,1] == self.tabuleiro[2,1]:
-            if self.tabuleiro[0,1] == 1:
+        elif self.tabuleiro[0][1] == self.tabuleiro[1][1] and self.tabuleiro[1][1] == self.tabuleiro[2][1]:
+            if self.tabuleiro[0][1] == 1:
                 return 1
-            elif self.tabuleiro[0,1] == 2:
+            elif self.tabuleiro[0][1] == 2:
                 return 2
                 
-        elif self.tabuleiro[0,2] == self.tabuleiro[1,2] and self.tabuleiro[1,2] == self.tabuleiro[2,2]:
-            if self.tabuleiro[1,2] == 1:
+        elif self.tabuleiro[0][2] == self.tabuleiro[1][2] and self.tabuleiro[1][2] == self.tabuleiro[2][2]:
+            if self.tabuleiro[1][2] == 1:
                 return 1
-            elif self.tabuleiro[1,2] == 2:
+            elif self.tabuleiro[1][2] == 2:
                 return 2
                 
-        elif self.tabuleiro[0,0] == self.tabuleiro[1,1] and self.tabuleiro[1,1] == self.tabuleiro[2,2]:
-            if self.tabuleiro[1,1] == 1:
+        elif self.tabuleiro[0][0] == self.tabuleiro[1][1] and self.tabuleiro[1][1] == self.tabuleiro[2][2]:
+            if self.tabuleiro[1][1] == 1:
                 return 1
-            elif self.tabuleiro[1,1] == 2:
+            elif self.tabuleiro[1][1] == 2:
                 return 2
                 
-        elif self.tabuleiro[0,2] == self.tabuleiro[1,1] and self.tabuleiro[1,1] == self.tabuleiro[2,0]:
-            if self.tabuleiro[1,1] == 1:
+        elif self.tabuleiro[0][2] == self.tabuleiro[1][1] and self.tabuleiro[1][1] == self.tabuleiro[2][0]:
+            if self.tabuleiro[1][1] == 1:
                 return 1
-            elif self.tabuleiro[1,1] == 2:
+            elif self.tabuleiro[1][1] == 2:
                 return 2
                 
         for linha in range(self.tabuleiro.shape[0]):

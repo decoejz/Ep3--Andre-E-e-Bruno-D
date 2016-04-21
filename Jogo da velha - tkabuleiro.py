@@ -143,7 +143,6 @@ class jogo_da_velha:
             self.botao6.configure(text='O')
 
 
-        
     def clicar_botao_7(self, event):
         self.botao7.configure(state='disabled')
         #self.botao7.configure(text='X')
