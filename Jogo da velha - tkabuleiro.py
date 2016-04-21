@@ -108,6 +108,7 @@ class jogo_da_velha:
         elif self.jogod.verifica_ganhador() == 0:
             tkm.showinfo(title='Vencedor',message='O jogo empatou')
             self.novo_jogo()
+        print(self.jogod.tabuleiro)
         
     def clicar_botao_2(self, event):
         self.jogod.recebe_jogada(0,1)
@@ -131,6 +132,7 @@ class jogo_da_velha:
         elif self.jogod.verifica_ganhador() == 0:
             tkm.showinfo(title='Vencedor',message='O jogo empatou')
             self.novo_jogo()
+        print(self.jogod.tabuleiro)
         
         
     def clicar_botao_3(self, event):
@@ -155,6 +157,7 @@ class jogo_da_velha:
         elif self.jogod.verifica_ganhador() == 0:
             tkm.showinfo(title='Vencedor',message='O jogo empatou')
             self.novo_jogo()
+        print(self.jogod.tabuleiro)
         
                 
     def clicar_botao_4(self, event):
@@ -179,6 +182,7 @@ class jogo_da_velha:
         elif self.jogod.verifica_ganhador() == 0:
             tkm.showinfo(title='Vencedor',message='O jogo empatou')
             self.novo_jogo()
+        print(self.jogod.tabuleiro)
         
                 
     def clicar_botao_5(self, event):
@@ -203,6 +207,7 @@ class jogo_da_velha:
         elif self.jogod.verifica_ganhador() == 0:
             tkm.showinfo(title='Vencedor',message='O jogo empatou')
             self.novo_jogo()
+        print(self.jogod.tabuleiro)
         
                 
     def clicar_botao_6(self, event):
@@ -227,6 +232,7 @@ class jogo_da_velha:
         elif self.jogod.verifica_ganhador() == 0:
             tkm.showinfo(title='Vencedor',message='O jogo empatou')
             self.novo_jogo()
+        print(self.jogod.tabuleiro)
         
         
     def clicar_botao_7(self, event):
@@ -251,7 +257,7 @@ class jogo_da_velha:
         elif self.jogod.verifica_ganhador() == 0:
             tkm.showinfo(title='Vencedor',message='O jogo empatou')
             self.novo_jogo()
-            
+        print(self.jogod.tabuleiro)
         
                 
     def clicar_botao_8(self, event):
@@ -276,7 +282,7 @@ class jogo_da_velha:
         elif self.jogod.verifica_ganhador() == 0:
             tkm.showinfo(title='Vencedor',message='O jogo empatou')
             self.novo_jogo()
-        
+        print(self.jogod.tabuleiro)
         
     def clicar_botao_9(self, event):
         self.jogod.recebe_jogada(2,2)
@@ -300,6 +306,7 @@ class jogo_da_velha:
         elif self.jogod.verifica_ganhador() == 0:
             tkm.showinfo(title='Vencedor',message='O jogo empatou')
             self.novo_jogo()
+        print(self.jogod.tabuleiro)
                 
     def label_proximo_jogador(self,jogada_de):
         self.proximo_jogador.set('Próxima jogada: {0}'.format(jogada_de))
@@ -309,8 +316,10 @@ class jogo_da_velha:
         
         self.recomecar = tkm.askyesno('Novo Jogo','Deseja jogar novamente?')
         
-        if self.recomecar == True:
-            self.reiniciar = tk
+        if self.recomecar:
+            self.jogod.limpa_jogadas()
+            self.__init__()
+            self.iniciar()
         else:
             self.window.destroy()
         
