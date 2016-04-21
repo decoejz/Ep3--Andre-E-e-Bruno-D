@@ -26,7 +26,7 @@ class jogo_da_velha:
         self.window.columnconfigure(2, minsize=100, weight=1)
         
         
-        self.jogod = EP3.Jogo(self.tabuleiro,1)
+        self.jogod = EP3.Jogo()
         
 
         #Criando os nove botões do jogo
@@ -78,106 +78,168 @@ class jogo_da_velha:
 
     def iniciar(self):
         self.window.mainloop()
-        
-    def tabuleiro(self):
-        self.jogod.limpa_jogada()
 
     def clicar_botao_1(self, event):
-        self.botao1.configure(state='disabled')
-        #self.botao1.config(text='X')
         self.jogod.recebe_jogada(0,0)
         if self.jogod.jogador == 1:
-            self.botao1.configure(text = 'X')
+            self.botao1.configure(text='X')
         elif self.jogod.jogador == 2:
             self.botao1.configure(text='O')
-
+        
+        if self.jogod.verifica_ganhador() == 1:
+            print('X venceu')
+        elif self.jogod.verifica_ganhador() == 2:
+            print('O venceu')
+        elif self.jogod.verifica_ganhador() == 0:
+            print('O jogo empatou')
+        else:
+            continue
+        
+        self.botao1.configure(state='disabled')
         
     def clicar_botao_2(self, event):
-        self.botao2.configure(state='disabled')
-        #self.botao2.config(text='X')
         self.jogod.recebe_jogada(0,1)
         if self.jogod.jogador == 1:
-            self.botao2.configure(text = 'X')
+            self.botao1.configure(text='X')
         elif self.jogod.jogador == 2:
-            self.botao2.configure(text='O')
-
+            self.botao1.configure(text='O')
         
+        if self.jogod.verifica_ganhador() == 1:
+            print('X venceu')
+        elif self.jogod.verifica_ganhador() == 2:
+            print('O venceu')
+        elif self.jogod.verifica_ganhador() == 0:
+            print('O jogo empatou')
+        else:
+            continue
+        
+        self.botao1.configure(state='disabled')
         
     def clicar_botao_3(self, event):
-        self.botao3.configure(state='disabled')
-        #self.botao3.configure(text='X')
         self.jogod.recebe_jogada(0,2)
         if self.jogod.jogador == 1:
-            self.botao3.configure(text = 'X')
+            self.botao1.configure(text='X')
         elif self.jogod.jogador == 2:
-            self.botao3.configure(text='O')
-
+            self.botao1.configure(text='O')
+       
+        if self.jogod.verifica_ganhador() == 1:
+            print('X venceu')
+        elif self.jogod.verifica_ganhador() == 2:
+            print('O venceu')
+        elif self.jogod.verifica_ganhador() == 0:
+            print('O jogo empatou')
+        else:
+            continue
+        
+        self.botao1.configure(state='disabled')
         
     def clicar_botao_4(self, event):
-        self.botao4.configure(state='disabled')
-        #self.botao4.configure(text='X')
         self.jogod.recebe_jogada(1,0)
         if self.jogod.jogador == 1:
-            self.botao4.configure(text = 'X')
+            self.botao1.configure(text='X')
         elif self.jogod.jogador == 2:
-            self.botao4.configure(text='O')
-
+            self.botao1.configure(text='O')
+        
+        if self.jogod.verifica_ganhador() == 1:
+            print('X venceu')
+        elif self.jogod.verifica_ganhador() == 2:
+            print('O venceu')
+        elif self.jogod.verifica_ganhador() == 0:
+            print('O jogo empatou')
+        else:
+            continue
+        
+        self.botao1.configure(state='disabled')
         
     def clicar_botao_5(self, event):
-        self.botao5.configure(state='disabled')
-        #self.botao5.configure(text='X')
         self.jogod.recebe_jogada(1,1)
         if self.jogod.jogador == 1:
-            self.botao5.configure(text = 'X')
+            self.botao1.configure(text='X')
         elif self.jogod.jogador == 2:
-            self.botao5.configure(text='O')
-
+            self.botao1.configure(text='O')
+        
+        if self.jogod.verifica_ganhador() == 1:
+            print('X venceu')
+        elif self.jogod.verifica_ganhador() == 2:
+            print('O venceu')
+        elif self.jogod.verifica_ganhador() == 0:
+            print('O jogo empatou')
+        else:
+            continue
+        
+        self.botao1.configure(state='disabled')
         
     def clicar_botao_6(self, event):
-        self.botao6.configure(state='disabled')
-        #self.botao6.configure(text='X')
         self.jogod.recebe_jogada(1,2)
         if self.jogod.jogador == 1:
-            self.botao6.configure(text = 'X')
+            self.botao1.configure(text='X')
         elif self.jogod.jogador == 2:
-            self.botao6.configure(text='O')
-
+            self.botao1.configure(text='O')
+        
+        if self.jogod.verifica_ganhador() == 1:
+            print('X venceu')
+        elif self.jogod.verifica_ganhador() == 2:
+            print('O venceu')
+        elif self.jogod.verifica_ganhador() == 0:
+            print('O jogo empatou')
+        else:
+            continue
+        
+        self.botao1.configure(state='disabled')
 
     def clicar_botao_7(self, event):
-        self.botao7.configure(state='disabled')
-        #self.botao7.configure(text='X')
         self.jogod.recebe_jogada(2,0)
         if self.jogod.jogador == 1:
-            self.botao7.configure(text = 'X')
+            self.botao1.configure(text='X')
         elif self.jogod.jogador == 2:
-            self.botao7.configure(text='O')
-
-
+            self.botao1.configure(text='O')
+        
+        if self.jogod.verifica_ganhador() == 1:
+            print('X venceu')
+        elif self.jogod.verifica_ganhador() == 2:
+            print('O venceu')
+        elif self.jogod.verifica_ganhador() == 0:
+            print('O jogo empatou')
+        else:
+            continue
+        
+        self.botao1.configure(state='disabled')
         
     def clicar_botao_8(self, event):
-        self.botao8.configure(state='disabled')
-        #self.botao8.configure(text='X')
         self.jogod.recebe_jogada(2,1)
         if self.jogod.jogador == 1:
-            self.botao8.configure(text = 'X')
+            self.botao1.configure(text='X')
         elif self.jogod.jogador == 2:
-            self.botao8.configure(text='O')
-
-
+            self.botao1.configure(text='O')
         
+        if self.jogod.verifica_ganhador() == 1:
+            print('X venceu')
+        elif self.jogod.verifica_ganhador() == 2:
+            print('O venceu')
+        elif self.jogod.verifica_ganhador() == 0:
+            print('O jogo empatou')
+        else:
+            continue
+        
+        self.botao1.configure(state='disabled')
+
     def clicar_botao_9(self, event):
-        self.botao9.configure(state='disabled')
-        #self.botao9.configure(text='X')
         self.jogod.recebe_jogada(2,2)
         if self.jogod.jogador == 1:
-            self.botao9.configure(text = 'X')
+            self.botao1.configure(text='X')
         elif self.jogod.jogador == 2:
-            self.botao9.configure(text='O')
-    
-    #Muitas coisas para serem alteradas!!!!
-    #Descobrir como alterar o texto do botão e como transformar um botão em label
-    #Descobrir como colocar bordas!
-    
+            self.botao1.configure(text='O')
+        
+        if self.jogod.verifica_ganhador() == 1:
+            print('X venceu')
+        elif self.jogod.verifica_ganhador() == 2:
+            print('O venceu')
+        elif self.jogod.verifica_ganhador() == 0:
+            print('O jogo empatou')
+        else:
+            continue
+        
+        self.botao1.configure(state='disabled')        
 
 jogo = jogo_da_velha()
 jogo.iniciar()

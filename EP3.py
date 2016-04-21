@@ -9,42 +9,30 @@ Created on Sat Apr 16 07:07:47 2016
 
 import numpy as np
 
+#Legenda:
+#0 = Espaço Vazio
+#1 = X
+#2 = O
 
 class Jogo:
-    """Classe que representa o gerenciamento do jogo"""
     
-    def __init__(self, tabuleiro,jogador):
-        self.tabuleiro = tabuleiro
-        self.jogador = jogador
-        self.tabuleiro = np.zeros([3,3])        
+    def __init__(self):
+        #Criando o tabuleiro
+        self.tabuleiro = np.zeros([3,3])
+        #Criando o jogador e iniando com X
+        self.jogador = 1
         
-        
-      #função na qual cria o tabuleiro 'zerado' e ocorre um reset após ultima jogada
-    def limpa_jogada(self):
-        #self.tabuleiro = np.zeros([3,3])
-        return (np.zeros([3,3]))
-
-            
-     #função na qual troca de jogador a cada rodada
-    def recebe_jogada(self, linha, coluna):
-#       self.tabuleiro = self.limpa_jogada()
-        if self.jogador == 1: 
-            self.tabuleiro[linha][coluna]=self.jogador
-            continuacao = self.verifica_ganhador()
-            if not continuacao == -1:
-                self.jogador = 2
-
-        elif self.jogador == 2:
-            self.tabuleiro[linha][coluna]=self.jogador
-            continuacao = self.verifica_ganhador()
-            if not continuacao == -1:
-                self.jogador = 1
-        print(self.tabuleiro,'\n')
-
-
-                
-     #funçao na qual é verificado caso o jogador venceu, perdeu ou empatou           
+    def recebe_jogada(self,linha,coluna):
+        #Igualando a jogada ao local do tabuleiro
+        self.tabuleiro[linha][coluna] = self.jogador
+        #Alternando o jogador
+        if self.tabuleiro[linha][coluna] == 1:
+            self.jogador = 2
+        elif self.tabuleiro[linha][coluna] == 2:
+            self.jogador = 1
+    
     def verifica_ganhador(self):
+        #Todas as possibilidades de vencer o jogo
         if self.tabuleiro[0][0] == self.tabuleiro[0][1] and self.tabuleiro[0][1] == self.tabuleiro[0][2]:
             if self.tabuleiro[0][0] == 1:
                 return 1
@@ -86,7 +74,7 @@ class Jogo:
                 return 1
             elif self.tabuleiro[1][1] == 2:
                 return 2
-                
+        
         elif self.tabuleiro[0][2] == self.tabuleiro[1][1] and self.tabuleiro[1][1] == self.tabuleiro[2][0]:
             if self.tabuleiro[1][1] == 1:
                 return 1
@@ -98,4 +86,8 @@ class Jogo:
                 if self.tabuleiro[linha,coluna] == 0:
                     return -1
         return 0
-
+    
+    def limpa_jogadas(self):
+        #Reinicio o tabuleiro e define o primeiro jogador.
+        self.tabuleiro = np.zeros([3,3])
+        self.jogador = 1
