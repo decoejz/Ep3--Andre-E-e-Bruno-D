@@ -280,11 +280,32 @@ class jogo_da_velha:
         self.proximo_jogador.set('Próxima jogada: {0}'.format(jogada_de))
         
     def novo_jogo(self):
-        resposta = tkm.askquestion("Novo Jogo", "Deseja jogar novamente?")
-        if resposta == 'yes':
-            print ("novo jogo")
-        else:
-            print ("feio")
+        
+        self.notificacao = tk.Toplevel()
+        self.notificacao.title('Vencedor')
+        self.notificacao.geometry("600X150+50+50")
+        
+        self.notificacao.rowconfigure(0, minsize = 75, weight = 1)
+        self.notificacao.rowconfigure(1, minsize = 75, weight = 1)
+        
+        self.notificacao.columnconfigure(0, minsize = 300, weight = 1)
+        self.notificacao.columnconfigure(1, minsize = 300, weight = 1)
+        
+        self.jogar_novamente = tk.Button(self.notificacao)
+        self.jogar_novamente.configure(text='Jogar novamente')
+        self.jogar_novamente.grid(row=1, column=0, sticky='nsew')
+        
+        self.sair_jogo = tk.Button(self.notificacao)
+        self.sair_jogo.configure(text='Sair')
+        self.sair_jogo.grid(row=1, column=1, sticky='nsew')
+            
+        
+        
+#        resposta = tkm.askquestion("Novo Jogo", "Deseja jogar novamente?")
+#        if resposta == 'yes':
+#            print ("novo jogo")
+#        else:
+#            print ("feio")
         
 jogo = jogo_da_velha()
 jogo.iniciar()
