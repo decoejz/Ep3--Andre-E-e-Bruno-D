@@ -8,6 +8,9 @@ Created on Sun Apr 17 17:19:32 2016
 import tkinter as tk
 #Importando o código do jogo
 import EP3
+#Para aparecer mensagem de vitório/empate e pergunta o que
+#deseja ser feito
+import tkinter.messagebox as tkm
 
 class jogo_da_velha:
     def __init__(self):
@@ -93,11 +96,11 @@ class jogo_da_velha:
             self.label_proximo_jogador('O')
         
         if self.jogod.verifica_ganhador() == 1:
-            print('X venceu')
+            tkm.showinfo(title='Vencedor',message='X venceu')
         elif self.jogod.verifica_ganhador() == 2:
-            print('O venceu')
+            tkm.showinfo(title='Vencedor',message='O venceu')
         elif self.jogod.verifica_ganhador() == 0:
-            print('O jogo empatou')
+            tkm.showinfo(title='Vencedor',message='O jogo empatou')
         
         self.botao1.configure(state='disabled')
         
@@ -113,11 +116,11 @@ class jogo_da_velha:
             self.label_proximo_jogador('O')
         
         if self.jogod.verifica_ganhador() == 1:
-            print('X venceu')
+            tkm.showinfo(title='Vencedor',message='X venceu')
         elif self.jogod.verifica_ganhador() == 2:
-            print('O venceu')
+            tkm.showinfo(title='Vencedor',message='O venceu')
         elif self.jogod.verifica_ganhador() == 0:
-            print('O jogo empatou')
+            tkm.showinfo(title='Vencedor',message='O jogo empatou')
         
         self.botao2.configure(state='disabled')
         
@@ -131,11 +134,11 @@ class jogo_da_velha:
             self.label_proximo_jogador('O')
        
         if self.jogod.verifica_ganhador() == 1:
-            print('X venceu')
+            tkm.showinfo(title='Vencedor',message='X venceu')
         elif self.jogod.verifica_ganhador() == 2:
-            print('O venceu')
+            tkm.showinfo(title='Vencedor',message='O venceu')
         elif self.jogod.verifica_ganhador() == 0:
-            print('O jogo empatou')
+            tkm.showinfo(title='Vencedor',message='O jogo empatou')
         
         self.botao3.configure(state='disabled')
                 
@@ -149,11 +152,11 @@ class jogo_da_velha:
             self.label_proximo_jogador('O')
         
         if self.jogod.verifica_ganhador() == 1:
-            print('X venceu')
+            tkm.showinfo(title='Vencedor',message='X venceu')
         elif self.jogod.verifica_ganhador() == 2:
-            print('O venceu')
+            tkm.showinfo(title='Vencedor',message='O venceu')
         elif self.jogod.verifica_ganhador() == 0:
-            print('O jogo empatou')
+            tkm.showinfo(title='Vencedor',message='O jogo empatou')
         
         self.botao4.configure(state='disabled')
                 
@@ -167,11 +170,11 @@ class jogo_da_velha:
             self.label_proximo_jogador('O')
         
         if self.jogod.verifica_ganhador() == 1:
-            print('X venceu')
+            tkm.showinfo(title='Vencedor',message='X venceu')
         elif self.jogod.verifica_ganhador() == 2:
-            print('O venceu')
+            tkm.showinfo(title='Vencedor',message='O venceu')
         elif self.jogod.verifica_ganhador() == 0:
-            print('O jogo empatou')
+            tkm.showinfo(title='Vencedor',message='O jogo empatou')
         
         self.botao5.configure(state='disabled')
                 
@@ -185,11 +188,11 @@ class jogo_da_velha:
             self.label_proximo_jogador('O')
         
         if self.jogod.verifica_ganhador() == 1:
-            print('X venceu')
+            tkm.showinfo(title='Vencedor',message='X venceu')
         elif self.jogod.verifica_ganhador() == 2:
-            print('O venceu')
+            tkm.showinfo(title='Vencedor',message='O venceu')
         elif self.jogod.verifica_ganhador() == 0:
-            print('O jogo empatou')
+            tkm.showinfo(title='Vencedor',message='O jogo empatou')
         
         self.botao6.configure(state='disabled')
         
@@ -203,11 +206,11 @@ class jogo_da_velha:
             self.label_proximo_jogador('O')
         
         if self.jogod.verifica_ganhador() == 1:
-            print('X venceu')
+            tkm.showinfo(title='Vencedor',message='X venceu')
         elif self.jogod.verifica_ganhador() == 2:
-            print('O venceu')
+            tkm.showinfo(title='Vencedor',message='O venceu')
         elif self.jogod.verifica_ganhador() == 0:
-            print('O jogo empatou')
+            tkm.showinfo(title='Vencedor',message='O jogo empatou')
         
         self.botao7.configure(state='disabled')
                 
@@ -221,11 +224,11 @@ class jogo_da_velha:
             self.label_proximo_jogador('O')
         
         if self.jogod.verifica_ganhador() == 1:
-            print('X venceu')
+            tkm.showinfo(title='Vencedor',message='X venceu')
         elif self.jogod.verifica_ganhador() == 2:
-            print('O venceu')
+            tkm.showinfo(title='Vencedor',message='O venceu')
         elif self.jogod.verifica_ganhador() == 0:
-            print('O jogo empatou')
+            tkm.showinfo(title='Vencedor',message='O jogo empatou')
         
         self.botao8.configure(state='disabled')
         
@@ -239,11 +242,11 @@ class jogo_da_velha:
             self.label_proximo_jogador('O')
         
         if self.jogod.verifica_ganhador() == 1:
-            print('X venceu')
+            tkm.showinfo(title='Vencedor',message='X venceu')
         elif self.jogod.verifica_ganhador() == 2:
-            print('O venceu')
+            tkm.showinfo(title='Vencedor',message='O venceu')
         elif self.jogod.verifica_ganhador() == 0:
-            print('O jogo empatou')
+            tkm.showinfo(title='Vencedor',message='O jogo empatou')
         
         self.botao9.configure(state='disabled')
         
