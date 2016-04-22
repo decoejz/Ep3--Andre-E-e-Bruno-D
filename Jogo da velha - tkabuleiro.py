@@ -66,6 +66,7 @@ class jogo_da_velha:
         jogador.configure(textvariable = self.proximo_jogador)
         jogador.grid(row=3, sticky='w', columnspan = 3)
         self.label_proximo_jogador('X')
+        
                 
         #Apertando o botão direito do mouse em cada botão do jogo.
         self.botao1.bind('<1>',self.clicar_botao_1)
@@ -301,7 +302,8 @@ class jogo_da_velha:
     def label_proximo_jogador(self,jogada_de):
         self.proximo_jogador.set('Próxima jogada: {0}'.format(jogada_de))
     
-    #Função que faz aparecer uma tela de fim de jogo    
+    #Função que faz aparecer uma tela de fim de jogo  e pode recomeçar
+    #ou sair do jogo
     def novo_jogo(self):
         
         self.recomecar = tkm.askyesno('Novo Jogo','Deseja jogar novamente?')
