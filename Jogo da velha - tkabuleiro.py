@@ -317,6 +317,7 @@ class jogo_da_velha:
         self.recomecar = tkm.askyesno('Novo Jogo','Deseja jogar novamente?')
         
         if self.recomecar:
+            self.window.destroy()
             self.jogod.limpa_jogadas()
             self.__init__()
             self.iniciar()
