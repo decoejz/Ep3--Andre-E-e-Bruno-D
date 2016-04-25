@@ -309,10 +309,6 @@ class jogo_da_velha:
         self.recomecar = tkm.askyesno('Novo Jogo','Deseja jogar novamente?')
         
         if self.recomecar:
-#            self.window.destroy()
-#            self.jogod.limpa_jogadas()
-#            self.__init__()
-#            self.iniciar()
             #Criando as linhas e colunas do jogo
             self.window.rowconfigure(0, minsize=100, weight=1)
             self.window.rowconfigure(1, minsize=100, weight=1)
