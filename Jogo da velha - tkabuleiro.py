@@ -309,10 +309,70 @@ class jogo_da_velha:
         self.recomecar = tkm.askyesno('Novo Jogo','Deseja jogar novamente?')
         
         if self.recomecar:
-            self.window.destroy()
-            self.jogod.limpa_jogadas()
-            self.__init__()
-            self.iniciar()
+#            self.window.destroy()
+#            self.jogod.limpa_jogadas()
+#            self.__init__()
+#            self.iniciar()
+            #Criando as linhas e colunas do jogo
+            self.window.rowconfigure(0, minsize=100, weight=1)
+            self.window.rowconfigure(1, minsize=100, weight=1)
+            self.window.rowconfigure(2, minsize=100, weight=1)
+            self.window.rowconfigure(3, minsize=50, weight=1)
+            
+            self.window.columnconfigure(0, minsize=100, weight=1)
+            self.window.columnconfigure(1, minsize=100, weight=1)
+            self.window.columnconfigure(2, minsize=100, weight=1)
+            
+            #Importando o jogo para o tabuleiro em interface gráfica
+            self.jogod = EP3.Jogo()
+    
+            #Criando os nove botões do jogo
+            self.botao1 = tk.Button(self.window)
+            self.botao1.grid(row=0,column=0, sticky='nsew')
+            
+            self.botao2 = tk.Button(self.window)
+            self.botao2.grid(row=0,column=1, sticky='nsew')
+            
+            self.botao3 = tk.Button(self.window)
+            self.botao3.grid(row=0,column=2, sticky='nsew')
+    
+            self.botao4 = tk.Button(self.window)
+            self.botao4.grid(row=1,column=0, sticky='nsew')
+    
+            self.botao5 = tk.Button(self.window)
+            self.botao5.grid(row=1,column=1, sticky='nsew')
+    
+            self.botao6 = tk.Button(self.window)
+            self.botao6.grid(row=1,column=2, sticky='nsew')
+    
+            self.botao7 = tk.Button(self.window)
+            self.botao7.grid(row=2,column=0, sticky='nsew')
+            
+            self.botao8 = tk.Button(self.window)
+            self.botao8.grid(row=2,column=1, sticky='nsew')
+    
+            self.botao9 = tk.Button(self.window)
+            self.botao9.grid(row=2,column=2, sticky='nsew')
+    
+            #Criando a caixa de texto que mostrará o próximo jogador
+            self.proximo_jogador = tk.StringVar()
+            jogador = tk.Label(self.window)
+            jogador.configure(textvariable = self.proximo_jogador)
+            jogador.grid(row=3, sticky='w', columnspan = 3)
+            self.label_proximo_jogador('X')
+        
+                
+            #Apertando o botão direito do mouse em cada botão do jogo.
+            self.botao1.bind('<1>',self.clicar_botao_1)
+            self.botao2.bind('<1>',self.clicar_botao_2)
+            self.botao3.bind('<1>',self.clicar_botao_3)
+            self.botao4.bind('<1>',self.clicar_botao_4)
+            self.botao5.bind('<1>',self.clicar_botao_5)
+            self.botao6.bind('<1>',self.clicar_botao_6)
+            self.botao7.bind('<1>',self.clicar_botao_7)
+            self.botao8.bind('<1>',self.clicar_botao_8)
+            self.botao9.bind('<1>',self.clicar_botao_9)
+
         else:
             self.window.destroy()
         
